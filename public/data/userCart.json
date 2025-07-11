@@ -1,0 +1,17 @@
+{
+  "userId": "user123",
+  "cartItems": [
+    {
+      "productId": "p01",
+      "quantity": 2
+    },
+    {
+      "productId": "p03",
+      "quantity": 1
+    },
+    {
+      "productId": "p04",
+      "quantity": 1
+    }
+  ]
+}

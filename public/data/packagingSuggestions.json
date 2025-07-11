@@ -1,0 +1,17 @@
+[
+  {
+    "productType": "Fruits",
+    "region": "India",
+    "suggestion": "Use banana leaves or paper trays."
+  },
+  {
+    "productType": "Beverages",
+    "region": "India",
+    "suggestion": "Switch to glass bottles or metal cans."
+  },
+  {
+    "productType": "Packaged Food",
+    "region": "India",
+    "suggestion": "Use paper wrappers or compostable films."
+  }
+]

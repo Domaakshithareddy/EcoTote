@@ -1,0 +1,29 @@
+[
+  {
+    "id": "sup1",
+    "name": "EcoSource Pvt Ltd",
+    "score": 92,
+    "emissions": "Low",
+    "labor": "Fair Trade Certified",
+    "materials": "Organic",
+    "packaging": "Compostable"
+  },
+  {
+    "id": "sup2",
+    "name": "GreenGlobal Co",
+    "score": 85,
+    "emissions": "Medium",
+    "labor": "Certified Ethical",
+    "materials": "Recycled",
+    "packaging": "Biodegradable"
+  },
+  {
+    "id": "sup3",
+    "name": "FastSupply Inc",
+    "score": 43,
+    "emissions": "High",
+    "labor": "Unknown",
+    "materials": "Synthetic",
+    "packaging": "Plastic"
+  }
+]

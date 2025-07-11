@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ngo1",
+    "name": "Trees for the Future",
+    "description": "Plant trees across deforested lands.",
+    "tokenCost": 50
+  },
+  {
+    "id": "ngo2",
+    "name": "Ocean Cleanup Project",
+    "description": "Support marine pollution reduction.",
+    "tokenCost": 40
+  },
+  {
+    "id": "ngo3",
+    "name": "Green Villages India",
+    "description": "Sustainable farming & reforestation.",
+    "tokenCost": 30
+  }
+]

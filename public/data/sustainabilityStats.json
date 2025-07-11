@@ -1,0 +1,13 @@
+{
+  "carbonSaved": 1.2,
+  "carbonUnit": "kg",
+  "waterSaved": 45,
+  "waterUnit": "liters",
+  "wasteReduced": 0.8,
+  "wasteUnit": "kg",
+  "equivalents": {
+    "carbon": "12 km of car travel",
+    "water": "1 bathtub",
+    "waste": "2 grocery bags"
+  }
+}

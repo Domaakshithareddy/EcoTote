@@ -1,0 +1,38 @@
+[
+  {
+    "id": "p01",
+    "name": "Plastic Water Bottle",
+    "carbonScore": 68,
+    "category": "Beverages",
+    "region": "India",
+    "packaging": "Plastic",
+    "greenAlt": "Reusable Bottle"
+  },
+  {
+    "id": "p02",
+    "name": "Organic Apple",
+    "carbonScore": 15,
+    "category": "Fruits",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": null
+  },
+  {
+    "id": "p03",
+    "name": "Instant Noodles (Plastic Pack)",
+    "carbonScore": 52,
+    "category": "Packaged Food",
+    "region": "India",
+    "packaging": "Plastic",
+    "greenAlt": "Paper-wrapped Noodles"
+  },
+  {
+    "id": "p04",
+    "name": "Milk (Tetra Pak)",
+    "carbonScore": 40,
+    "category": "Dairy",
+    "region": "India",
+    "packaging": "Composite",
+    "greenAlt": "Glass Bottle Milk"
+  }
+]

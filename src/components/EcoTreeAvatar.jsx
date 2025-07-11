@@ -1,6 +1,6 @@
 import React from "react";
-import happyTree from "../assets/happy-tree.png";
-import sadTree from "../assets/sad-tree.png";
+import happyTree from "../assets/react.svg";
+import sadTree from "../assets/react.svg";
 
 const EcoTreeAvatar = ({ totalCarbon }) => {
     const treeImage = totalCarbon < 50 ? happyTree : sadTree;

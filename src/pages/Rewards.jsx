@@ -1,14 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { fetchJSON } from "../utils/fetchJSON";
+import React, { useEffect, useState, useContext } from "react";
+import fetchJSON from "../utils/fetchJSON";
 import EcoTokenTracker from "../components/EcoTokenTracker";
+import { AppContext } from "../context/AppContext";
 
 const Rewards = () => {
-  const tokens = 65; // Static for demo
+  const { tokens, setTokens } = useContext(AppContext);
   const [donations, setDonations] = useState([]);
 
   useEffect(() => {
     fetchJSON("donations.json").then(setDonations);
   }, []);
+
+  const handleDonate = (id) => {
+    const selected = donations.find((d) => d.id === id);
+    if (selected && tokens >= selected.tokenCost) {
+      setTokens(tokens - selected.tokenCost);
+      alert(`✅ Donated ${selected.tokenCost} tokens to ${selected.name}`);
+    }
+  };
 
   return (
     <div className="p-6">
@@ -23,6 +32,7 @@ const Rewards = () => {
             <button
               className="mt-2 px-3 py-1 bg-green-500 text-white rounded"
               disabled={tokens < d.tokenCost}
+              onClick={() => handleDonate(d.id)}
             >
               {tokens >= d.tokenCost ? `Donate ${d.tokenCost} Tokens` : "Not enough tokens"}
             </button>

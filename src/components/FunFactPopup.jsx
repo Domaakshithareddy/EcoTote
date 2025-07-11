@@ -1,5 +1,5 @@
 import React, {useEffect,useState} from "react";
-import {fetchJSON} from "../utils/fetchJSON";
+import fetchJSON from "../utils/fetchJSON";
 
 const FunFactPopup=()=>{
     const [fact,setFact]=useState('');

@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from "react";
-import { fetchJSON } from "../utils/fetchJSON";
+import fetchJSON from "../utils/fetchJSON";
 
 const QuickSwapSuggestions=({cart})=>{
     const [swaps,setSwaps]=useState([]);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchJSON } from "../utils/fetchJSON";
+import fetchJSON from "../utils/fetchJSON";
 import SupplierScoreCard from "../components/SupplierScoreCard";
 
 const Dashboard = () => {

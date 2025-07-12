@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import fetchJSON from '../utils/fetchJSON';
 import ProductImpact from "../components/ProductImpactCard";
 import { AppContext } from "../context/AppContext";
+import PageWrapper from "../components/PageWrapper"; 
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -17,6 +18,7 @@ const Shop = () => {
   };
 
   return (
+    <PageWrapper>
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">🛍 Shop</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -33,6 +35,7 @@ const Shop = () => {
         ))}
       </div>
     </div>
+    </PageWrapper>
   );
 };
 

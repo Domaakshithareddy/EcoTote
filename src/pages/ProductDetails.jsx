@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import fetchJSON from "../utils/fetchJSON";
 import { AppContext } from "../context/AppContext";
 import ProductImpact from "../components/ProductImpactCard";
+import PageWrapper from "../components/PageWrapper"; 
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -47,6 +48,7 @@ const ProductDetails = () => {
   if (!product) return <p className="p-6">Loading...</p>;
 
   return (
+    <PageWrapper>
     <div className="p-6">
       {/* Image + Details layout */}
       <div className="flex flex-col md:flex-row gap-6 mb-6">
@@ -207,6 +209,7 @@ const ProductDetails = () => {
         </div>
       )}
     </div>
+    </PageWrapper>
   );
 };
 

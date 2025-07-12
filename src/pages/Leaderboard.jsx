@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import fetchJSON from "../utils/fetchJSON";
+import PageWrapper from "../components/PageWrapper"; 
 
 const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
@@ -9,6 +10,7 @@ const Leaderboard = () => {
   }, []);
 
   return (
+    <PageWrapper>
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">🏆 Eco Leaderboard - Bengaluru</h1>
       <ul className="space-y-2">
@@ -24,6 +26,7 @@ const Leaderboard = () => {
         ))}
       </ul>
     </div>
+    </PageWrapper>
   );
 };
 

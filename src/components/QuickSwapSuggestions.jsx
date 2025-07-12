@@ -1,29 +1,38 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import fetchJSON from "../utils/fetchJSON";
 
-const QuickSwapSuggestions=({cart})=>{
-    const [swaps,setSwaps]=useState([]);
+const QuickSwapSuggestions = ({ cart }) => {
+  const [swaps, setSwaps] = useState([]);
 
-    useEffect(()=>{
-        fetchJSON("wasteSwapSuggestions.json").then((data)=>{
-            const matching=cart.map((item)=>
-                data.find((swap)=>swap.productId===item.productId)
-            ).filter(Boolean);
-            setSwaps(matching);
-        });
-    },[cart]);
+  useEffect(() => {
+    fetchJSON("wasteSwapSuggestions.json").then((data) => {
+      const matching = cart
+        .map((item) => data.find((swap) => swap.productId === item.productId))
+        .filter(Boolean);
+      setSwaps(matching);
+    });
+  }, [cart]);
 
-    return (
-        <div className="space-y-2">
-            <h2 className="text-lg font-semibold text-green-700"></h2>
-            {swaps.map((swap,idx)=>(
-                <div key={idx} className="p-3 bg-white rounded-md border shadow-sm">
-                    <p><strong>Try:</strong>{swap.alternative}</p>
-                    <p className="text-sm text-gray-600">{swap.benefit}</p>
-                </div>
-            ))}
-        </div>
-    );
+  return (
+    <div className="space-y-3">
+      {swaps.length === 0 ? (
+        <p className="text-gray-500 text-sm">No swap suggestions available.</p>
+      ) : (
+        swaps.map((swap, idx) => (
+          <div
+            key={idx}
+            className="p-3 bg-green-50 border border-green-200 rounded-md hover:bg-green-100 transition"
+          >
+            <p className="text-sm">
+              <strong className="text-green-800">Try:</strong>{" "}
+              {swap.alternative}
+            </p>
+            <p className="text-xs text-gray-600">{swap.benefit}</p>
+          </div>
+        ))
+      )}
+    </div>
+  );
 };
 
 export default QuickSwapSuggestions;

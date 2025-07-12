@@ -1,9 +1,11 @@
 // Folder: src/pages/Recycle.jsx
 
 import React from "react";
+import PageWrapper from "../components/PageWrapper"; 
 
 const Recycle = () => {
   return (
+    <PageWrapper>
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">♻️ Closed-Loop Recycling</h1>
       <p className="text-gray-700 mb-4">
@@ -22,6 +24,7 @@ const Recycle = () => {
         </p>
       </div>
     </div>
+    </PageWrapper>
   );
 };
 

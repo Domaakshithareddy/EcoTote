@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import fetchJSON from "../utils/fetchJSON";
 import EcoTokenTracker from "../components/EcoTokenTracker";
 import { AppContext } from "../context/AppContext";
+import PageWrapper from "../components/PageWrapper"; 
 
 const Rewards = () => {
   const { tokens, setTokens } = useContext(AppContext);
@@ -50,6 +51,7 @@ const Rewards = () => {
   };
 
   return (
+    <PageWrapper>
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">🎁 Rewards & Karma</h1>
       <EcoTokenTracker tokens={tokens} />
@@ -232,6 +234,7 @@ const Rewards = () => {
 )}
 
     </div>
+    </PageWrapper>
   );
 };
 

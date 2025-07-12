@@ -2,9 +2,11 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import PageWrapper from "../components/PageWrapper"; 
 
 const Home = () => {
   return (
+    <PageWrapper>
     <div className="p-6 text-center">
       <h1 className="text-3xl font-bold text-green-700 mb-4">🌍 Welcome to GreenCartAI</h1>
       <p className="text-gray-700 text-lg mb-6">
@@ -32,6 +34,7 @@ const Home = () => {
         </Link>
       </div>
     </div>
+    </PageWrapper>
   );
 };
 

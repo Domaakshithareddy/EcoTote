@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import fetchJSON from "../utils/fetchJSON";
 import ProductCard from "../components/ProductCard"; // ✅ Use your custom card
+import PageWrapper from "../components/PageWrapper"; 
 
 const AllProducts = () => {
   const { setCart } = useContext(AppContext);
@@ -40,6 +41,7 @@ const AllProducts = () => {
   };
 
   return (
+    <PageWrapper>
     <div className="p-6">
       <h1 className="text-3xl font-bold text-green-700 mb-6">🌿 Explore Products</h1>
 
@@ -77,6 +79,7 @@ const AllProducts = () => {
 </div>
 
     </div>
+    </PageWrapper>
   );
 };
 

@@ -11,6 +11,8 @@ import Shop from "./pages/Shop";
 import Navbar from "./components/Navbar";
 import FunFactPopup from "./components/FunFactPopup";
 import AppProvider from "./context/AppProvider";
+import AllProducts from './pages/AllProducts'
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -19,7 +21,8 @@ const App = () => {
         <div className="min-h-screen bg-gray-50">
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<AllProducts />} />
+            <Route path="/product/:productId" element={<ProductDetails />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/leaderboard" element={<Leaderboard />} />

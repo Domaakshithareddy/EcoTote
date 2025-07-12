@@ -1,38 +1,1004 @@
 [
   {
-    "id": "p01",
-    "name": "Plastic Water Bottle",
-    "carbonScore": 68,
-    "category": "Beverages",
+  "id": "p001",
+  "name": "Bamboo Toothbrush",
+  "carbonScore": 12,
+  "category": "Personal Care",
+  "subCategory": "Toiletries",
+  "region": "India",
+  "packaging": "Compostable Paper",
+  "greenAlt": null,
+  "image": "/images/graceful-bamboo2.jpg"
+}
+,
+  {
+    "id": "p002",
+    "name": "Organic Cotton T-Shirt",
+    "carbonScore": 18,
+    "category": "Clothing",
+    "subCategory": "Casual Wear",
     "region": "India",
-    "packaging": "Plastic",
-    "greenAlt": "Reusable Bottle"
+    "packaging": "Recycled Paper",
+    "greenAlt": null
   },
   {
-    "id": "p02",
-    "name": "Organic Apple",
+    "id": "p003",
+    "name": "Beeswax Food Wraps (Set of 3)",
     "carbonScore": 15,
-    "category": "Fruits",
+    "category": "Kitchen",
+    "subCategory": "Food Storage",
+    "region": "India",
+    "packaging": "Cotton Pouch",
+    "greenAlt": null
+  },
+  {
+    "id": "p004",
+    "name": "Stainless Steel Water Bottle",
+    "carbonScore": 20,
+    "category": "Beverages",
+    "subCategory": "Bottled Drinks",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p005",
+    "name": "Organic Basmati Rice (Jute Bag)",
+    "carbonScore": 22,
+    "category": "Grains",
+    "subCategory": "Staple",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p006",
+    "name": "Coconut Shell Bowl",
+    "carbonScore": 10,
+    "category": "Kitchen",
+    "subCategory": "Tableware",
+    "region": "India",
+    "packaging": "Bamboo Fiber",
+    "greenAlt": null
+  },
+  {
+    "id": "p007",
+    "name": "Biodegradable Sanitary Pads (Pack of 10)",
+    "carbonScore": 25,
+    "category": "Personal Care",
+    "subCategory": "Hygiene",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": "Menstrual Cup"
+  },
+  {
+    "id": "p008",
+    "name": "Recycled Paper Notebook (A5)",
+    "carbonScore": 14,
+    "category": "Stationery",
+    "subCategory": "Notebooks",
+    "region": "India",
+    "packaging": "Recycled Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p009",
+    "name": "Organic Coconut Oil (Glass Jar)",
+    "carbonScore": 20,
+    "category": "Cooking Essentials",
+    "subCategory": "Oil",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p010",
+    "name": "Bamboo Straw Set (6 Pieces)",
+    "carbonScore": 8,
+    "category": "Kitchen",
+    "subCategory": "Utensils",
+    "region": "India",
+    "packaging": "Cotton Bag",
+    "greenAlt": null
+  },
+  {
+    "id": "p011",
+    "name": "Plantable Seed Pencils (Pack of 10)",
+    "carbonScore": 10,
+    "category": "Stationery",
+    "subCategory": "Writing",
+    "region": "India",
+    "packaging": "Recycled Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p012",
+    "name": "Organic Turmeric Powder",
+    "carbonScore": 18,
+    "category": "Spices",
+    "subCategory": "Organic",
+    "region": "India",
+    "packaging": "Paper Pouch",
+    "greenAlt": null
+  },
+  {
+    "id": "p013",
+    "name": "Reusable Cotton Produce Bags (Set of 5)",
+    "carbonScore": 15,
+    "category": "Kitchen",
+    "subCategory": "Food Storage",
+    "region": "India",
+    "packaging": "Cotton",
+    "greenAlt": null
+  },
+  {
+    "id": "p014",
+    "name": "Copper Water Bottle",
+    "carbonScore": 22,
+    "category": "Beverages",
+    "subCategory": "Bottled Drinks",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p015",
+    "name": "Eco-Friendly Dishwashing Soap Bar",
+    "carbonScore": 12,
+    "category": "Household",
+    "subCategory": "Cleaning",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p016",
+    "name": "Organic Cotton Bed Sheet (Queen)",
+    "carbonScore": 25,
+    "category": "Home Decor",
+    "subCategory": "Bedding",
+    "region": "India",
+    "packaging": "Recycled Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p017",
+    "name": "Reusable Bamboo Cutlery Set",
+    "carbonScore": 10,
+    "category": "Kitchen",
+    "subCategory": "Utensils",
+    "region": "India",
+    "packaging": "Cotton Pouch",
+    "greenAlt": null
+  },
+  {
+    "id": "p018",
+    "name": "Organic Green Tea (Loose Leaf)",
+    "carbonScore": 15,
+    "category": "Beverages",
+    "subCategory": "Tea",
+    "region": "India",
+    "packaging": "Paper Tin",
+    "greenAlt": null
+  },
+  {
+    "id": "p019",
+    "name": "Compostable Garbage Bags (Pack of 30)",
+    "carbonScore": 20,
+    "category": "Household",
+    "subCategory": "Waste Management",
     "region": "India",
     "packaging": "Compostable",
     "greenAlt": null
   },
   {
-    "id": "p03",
-    "name": "Instant Noodles (Plastic Pack)",
-    "carbonScore": 52,
-    "category": "Packaged Food",
+    "id": "p020",
+    "name": "Vegan Leather Wallet",
+    "carbonScore": 28,
+    "category": "Accessories",
+    "subCategory": "Wallets",
     "region": "India",
-    "packaging": "Plastic",
-    "greenAlt": "Paper-wrapped Noodles"
+    "packaging": "Recycled Paper",
+    "greenAlt": null
   },
   {
-    "id": "p04",
-    "name": "Milk (Tetra Pak)",
-    "carbonScore": 40,
-    "category": "Dairy",
+    "id": "p021",
+    "name": "Organic Jaggery (Block)",
+    "carbonScore": 18,
+    "category": "Grains",
+    "subCategory": "Sweeteners",
     "region": "India",
-    "packaging": "Composite",
-    "greenAlt": "Glass Bottle Milk"
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p022",
+    "name": "Bamboo Hairbrush",
+    "carbonScore": 14,
+    "category": "Personal Care",
+    "subCategory": "Hair",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p023",
+    "name": "Recycled Paper Gift Wrap",
+    "carbonScore": 12,
+    "category": "Stationery",
+    "subCategory": "Gifting",
+    "region": "India",
+    "packaging": "None",
+    "greenAlt": null
+  },
+  {
+    "id": "p024",
+    "name": "Organic Cotton Face Mask",
+    "carbonScore": 15,
+    "category": "Accessories",
+    "subCategory": "Masks",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p025",
+    "name": "Wooden Chopping Board",
+    "carbonScore": 20,
+    "category": "Kitchen",
+    "subCategory": "Utensils",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p026",
+    "name": "Organic Moong Dal",
+    "carbonScore": 22,
+    "category": "Grains",
+    "subCategory": "Pulses",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p027",
+    "name": "Natural Loofah Sponge",
+    "carbonScore": 8,
+    "category": "Personal Care",
+    "subCategory": "Bath",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": null
+  },
+  {
+    "id": "p028",
+    "name": "Recycled Plastic Yoga Mat",
+    "carbonScore": 30,
+    "category": "Fitness",
+    "subCategory": "Yoga",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": "Cork Yoga Mat"
+  },
+  {
+    "id": "p029",
+    "name": "Organic Cotton Tote Bag",
+    "carbonScore": 18,
+    "category": "Accessories",
+    "subCategory": "Bags",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p030",
+    "name": "Eco-Friendly Laundry Detergent Sheets",
+    "carbonScore": 15,
+    "category": "Household",
+    "subCategory": "Cleaning",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p031",
+    "name": "Organic Coffee Beans",
+    "carbonScore": 20,
+    "category": "Beverages",
+    "subCategory": "Coffee",
+    "region": "India",
+    "packaging": "Paper Tin",
+    "greenAlt": null
+  },
+  {
+    "id": "p032",
+    "name": "Bamboo Sunglasses",
+    "carbonScore": 25,
+    "category": "Accessories",
+    "subCategory": "Eyewear",
+    "region": "India",
+    "packaging": "Recycled Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p033",
+    "name": "Compostable Coffee Pods",
+    "carbonScore": 22,
+    "category": "Beverages",
+    "subCategory": "Coffee",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": null
+  },
+  {
+    "id": "p034",
+    "name": "Organic Cotton Socks (Pack of 3)",
+    "carbonScore": 18,
+    "category": "Clothing",
+    "subCategory": "Accessories",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p035",
+    "name": "Wooden Toy Set for Kids",
+    "carbonScore": 20,
+    "category": "Kids",
+    "subCategory": "Toys",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p036",
+    "name": "Organic Almonds (Glass Jar)",
+    "carbonScore": 25,
+    "category": "Snacks",
+    "subCategory": "Nuts",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p037",
+    "name": "Bamboo Desk Organizer",
+    "carbonScore": 15,
+    "category": "Stationery",
+    "subCategory": "Office",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p038",
+    "name": "Natural Soy Wax Candle",
+    "carbonScore": 18,
+    "category": "Home Decor",
+    "subCategory": "Candles",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p039",
+    "name": "Organic Cotton Bath Towel",
+    "carbonScore": 20,
+    "category": "Household",
+    "subCategory": "Bathroom",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p040",
+    "name": "Reusable Silicone Food Storage Bag",
+    "carbonScore": 25,
+    "category": "Kitchen",
+    "subCategory": "Food Storage",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p041",
+    "name": "Organic Masoor Dal",
+    "carbonScore": 22,
+    "category": "Grains",
+    "subCategory": "Pulses",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p042",
+    "name": "Cork Notebook (A5)",
+    "carbonScore": 14,
+    "category": "Stationery",
+    "subCategory": "Notebooks",
+    "region": "India",
+    "packaging": "Recycled Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p043",
+    "name": "Organic Honey (Glass Jar)",
+    "carbonScore": 20,
+    "category": "Grains",
+    "subCategory": "Sweeteners",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p044",
+    "name": "Bamboo Laptop Stand",
+    "carbonScore": 18,
+    "category": "Stationery",
+    "subCategory": "Office",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p045",
+    "name": "Organic Cotton Apron",
+    "carbonScore": 15,
+    "category": "Kitchen",
+    "subCategory": "Accessories",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p046",
+    "name": "Natural Jute Floor Mat",
+    "carbonScore": 20,
+    "category": "Home Decor",
+    "subCategory": "Rugs",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p047",
+    "name": "Organic Ghee (Glass Jar)",
+    "carbonScore": 25,
+    "category": "Cooking Essentials",
+    "subCategory": "Dairy",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p048",
+    "name": "Bamboo Kitchen Utensil Set",
+    "carbonScore": 12,
+    "category": "Kitchen",
+    "subCategory": "Utensils",
+    "region": "India",
+    "packaging": "Cotton Pouch",
+    "greenAlt": null
+  },
+  {
+    "id": "p049",
+    "name": "Recycled Paper Postcards (Pack of 10)",
+    "carbonScore": 10,
+    "category": "Stationery",
+    "subCategory": "Gifting",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p050",
+    "name": "Organic Cotton Handkerchiefs (Pack of 6)",
+    "carbonScore": 15,
+    "category": "Personal Care",
+    "subCategory": "Accessories",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p051",
+    "name": "Plastic Water Bottle",
+    "carbonScore": 68,
+    "category": "Beverages",
+    "subCategory": "Bottled Drinks",
+    "region": "India",
+    "packaging": "Plastic",
+    "greenAlt": "Reusable Stainless Steel Bottle"
+  },
+  {
+    "id": "p052",
+    "name": "Organic Mangoes (Loose)",
+    "carbonScore": 12,
+    "category": "Fruits",
+    "subCategory": "Organic",
+    "region": "India",
+    "packaging": "None",
+    "greenAlt": null
+  },
+  {
+    "id": "p053",
+    "name": "Instant Coffee (Plastic Jar)",
+    "carbonScore": 55,
+    "category": "Beverages",
+    "subCategory": "Coffee",
+    "region": "India",
+    "packaging": "Plastic",
+    "greenAlt": "Glass Jar Coffee"
+  },
+  {
+    "id": "p054",
+    "name": "Organic Milk (Glass Bottle)",
+    "carbonScore": 20,
+    "category": "Dairy",
+    "subCategory": "Milk",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p055",
+    "name": "Compostable Snack Bag",
+    "carbonScore": 18,
+    "category": "Snacks",
+    "subCategory": "Chips",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": null
+  },
+  {
+    "id": "p056",
+    "name": "Organic Tomatoes (Loose)",
+    "carbonScore": 10,
+    "category": "Vegetables",
+    "subCategory": "Organic",
+    "region": "India",
+    "packaging": "None",
+    "greenAlt": null
+  },
+  {
+    "id": "p057",
+    "name": "Toothpaste Tablets (Glass Jar)",
+    "carbonScore": 15,
+    "category": "Personal Care",
+    "subCategory": "Toiletries",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p058",
+    "name": "Reusable Cotton Cleaning Cloth",
+    "carbonScore": 12,
+    "category": "Household",
+    "subCategory": "Cleaning",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p059",
+    "name": "Organic Frozen Berries",
+    "carbonScore": 30,
+    "category": "Frozen",
+    "subCategory": "Fruits",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": null
+  },
+  {
+    "id": "p060",
+    "name": "Powder Detergent (Cardboard Box)",
+    "carbonScore": 25,
+    "category": "Household",
+    "subCategory": "Cleaning",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p061",
+    "name": "Yogurt (Glass Jar)",
+    "carbonScore": 20,
+    "category": "Dairy",
+    "subCategory": "Yogurt",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p062",
+    "name": "Organic Wheat Flour (Jute Bag)",
+    "carbonScore": 22,
+    "category": "Grains",
+    "subCategory": "Staple",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p063",
+    "name": "Organic Sunflower Oil (Glass Bottle)",
+    "carbonScore": 20,
+    "category": "Cooking Essentials",
+    "subCategory": "Oil",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p064",
+    "name": "Shampoo Bar",
+    "carbonScore": 12,
+    "category": "Personal Care",
+    "subCategory": "Hair",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p065",
+    "name": "Stainless Steel Cutlery Set",
+    "carbonScore": 18,
+    "category": "Kitchen",
+    "subCategory": "Utensils",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p066",
+    "name": "Organic Lemonade (Glass Bottle)",
+    "carbonScore": 22,
+    "category": "Beverages",
+    "subCategory": "Drinks",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p067",
+    "name": "Organic Cookies (Paper Box)",
+    "carbonScore": 20,
+    "category": "Snacks",
+    "subCategory": "Biscuits",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p068",
+    "name": "Fresh Paneer (Cloth Wrap)",
+    "carbonScore": 15,
+    "category": "Dairy",
+    "subCategory": "Cheese",
+    "region": "India",
+    "packaging": "Compostable",
+    "greenAlt": null
+  },
+  {
+    "id": "p069",
+    "name": "Organic Sugar (Paper Bag)",
+    "carbonScore": 18,
+    "category": "Grains",
+    "subCategory": "Sweeteners",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p070",
+    "name": "Bamboo Coasters (Set of 4)",
+    "carbonScore": 12,
+    "category": "Home Decor",
+    "subCategory": "Tableware",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p071",
+    "name": "Organic Cotton Baby Onesie",
+    "carbonScore": 18,
+    "category": "Kids",
+    "subCategory": "Clothing",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p072",
+    "name": "Recycled Paper Greeting Cards (Pack of 5)",
+    "carbonScore": 10,
+    "category": "Stationery",
+    "subCategory": "Gifting",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p073",
+    "name": "Organic Black Pepper",
+    "carbonScore": 15,
+    "category": "Spices",
+    "subCategory": "Organic",
+    "region": "India",
+    "packaging": "Paper Pouch",
+    "greenAlt": null
+  },
+  {
+    "id": "p074",
+    "name": "Bamboo Travel Mug",
+    "carbonScore": 20,
+    "category": "Beverages",
+    "subCategory": "Drinkware",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p075",
+    "name": "Organic Cotton Curtains",
+    "carbonScore": 25,
+    "category": "Home Decor",
+    "subCategory": "Curtains",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p076",
+    "name": "Natural Incense Sticks (Pack of 20)",
+    "carbonScore": 12,
+    "category": "Home Decor",
+    "subCategory": "Fragrance",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p077",
+    "name": "Organic Chickpeas",
+    "carbonScore": 22,
+    "category": "Grains",
+    "subCategory": "Pulses",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p078",
+    "name": "Bamboo Phone Stand",
+    "carbonScore": 15,
+    "category": "Accessories",
+    "subCategory": "Electronics",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p079",
+    "name": "Organic Cotton Pillowcase",
+    "carbonScore": 18,
+    "category": "Home Decor",
+    "subCategory": "Bedding",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p080",
+    "name": "Reusable Silicone Baking Mat",
+    "carbonScore": 20,
+    "category": "Kitchen",
+    "subCategory": "Baking",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p081",
+    "name": "Organic Cashews (Glass Jar)",
+    "carbonScore": 25,
+    "category": "Snacks",
+    "subCategory": "Nuts",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p082",
+    "name": "Bamboo Wall Shelf",
+    "carbonScore": 20,
+    "category": "Home Decor",
+    "subCategory": "Furniture",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p083",
+    "name": "Organic Cotton Scarf",
+    "carbonScore": 15,
+    "category": "Clothing",
+    "subCategory": "Accessories",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p084",
+    "name": "Natural Bamboo Soap Dish",
+    "carbonScore": 12,
+    "category": "Personal Care",
+    "subCategory": "Bath",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p085",
+    "name": "Organic Raisins (Paper Bag)",
+    "carbonScore": 18,
+    "category": "Snacks",
+    "subCategory": "Dried Fruits",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p086",
+    "name": "Jute Shopping Bag",
+    "carbonScore": 15,
+    "category": "Accessories",
+    "subCategory": "Bags",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p087",
+    "name": "Organic Cumin Seeds",
+    "carbonScore": 15,
+    "category": "Spices",
+    "subCategory": "Organic",
+    "region": "India",
+    "packaging": "Paper Pouch",
+    "greenAlt": null
+  },
+  {
+    "id": "p088",
+    "name": "Bamboo Keychain",
+    "carbonScore": 10,
+    "category": "Accessories",
+    "subCategory": "Gifting",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p089",
+    "name": "Organic Cotton Table Runner",
+    "carbonScore": 20,
+    "category": "Home Decor",
+    "subCategory": "Tableware",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p090",
+    "name": "Natural Clay Water Pot",
+    "carbonScore": 18,
+    "category": "Kitchen",
+    "subCategory": "Drinkware",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p091",
+    "name": "Organic Lentils",
+    "carbonScore": 22,
+    "category": "Grains",
+    "subCategory": "Pulses",
+    "region": "India",
+    "packaging": "Jute",
+    "greenAlt": null
+  },
+  {
+    "id": "p092",
+    "name": "Bamboo Pen Holder",
+    "carbonScore": 12,
+    "category": "Stationery",
+    "subCategory": "Office",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p093",
+    "name": "Organic Cotton Napkins (Set of 4)",
+    "carbonScore": 15,
+    "category": "Kitchen",
+    "subCategory": "Tableware",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p094",
+    "name": "Natural Reed Diffuser",
+    "carbonScore": 20,
+    "category": "Home Decor",
+    "subCategory": "Fragrance",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p095",
+    "name": "Organic Walnuts (Glass Jar)",
+    "carbonScore": 25,
+    "category": "Snacks",
+    "subCategory": "Nuts",
+    "region": "India",
+    "packaging": "Glass",
+    "greenAlt": null
+  },
+  {
+    "id": "p096",
+    "name": "Bamboo Photo Frame",
+    "carbonScore": 18,
+    "category": "Home Decor",
+    "subCategory": "Decor",
+    "region": "India",
+    "packaging": "Cardboard",
+    "greenAlt": null
+  },
+  {
+    "id": "p097",
+    "name": "Organic Cotton Yoga Pants",
+    "carbonScore": 20,
+    "category": "Clothing",
+    "subCategory": "Activewear",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p098",
+    "name": "Natural Bamboo Comb",
+    "carbonScore": 12,
+    "category": "Personal Care",
+    "subCategory": "Hair",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p099",
+    "name": "Organic Dried Apricots (Paper Bag)",
+    "carbonScore": 18,
+    "category": "Snacks",
+    "subCategory": "Dried Fruits",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
+  },
+  {
+    "id": "p100",
+    "name": "Jute Laptop Sleeve",
+    "carbonScore": 20,
+    "category": "Accessories",
+    "subCategory": "Electronics",
+    "region": "India",
+    "packaging": "Paper",
+    "greenAlt": null
   }
 ]

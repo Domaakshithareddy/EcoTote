@@ -31,11 +31,6 @@ const ProductCard = ({ product, onAdd }) => {
             <p className="text-sm text-gray-600">
               📍 Region: {product.region}
             </p>
-            {product.greenAlt && (
-              <p className="text-xs text-green-600 mt-1">
-                ✅ Green Alt: {product.greenAlt}
-              </p>
-            )}
           </Link>
 
           {/* Button aligned right */}

@@ -14,7 +14,7 @@ const AllProducts = () => {
   useEffect(() => {
     fetchJSON("products.json").then((data) => {
       setProducts(data);
-      const randomProducts = getRandomProducts(data, 20);
+      const randomProducts = getRandomProducts(data, 18);
       setFiltered(randomProducts);
     });
   }, []);

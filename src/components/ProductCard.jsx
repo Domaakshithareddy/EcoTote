@@ -1,47 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import QuantityButton from "./QuantityButton";
 
-const ProductCard = ({ product, onAdd }) => {
+const ProductCard = ({ product }) => {
   return (
-    <div className="border rounded-lg shadow p-4 bg-white w-full">
-      <div className="flex flex-row gap-4 items-start hover:bg-gray-50 transition">
-        {/* Left Side: Image */}
-        <Link
-          to={`/product/${product.id}`}
-          className="w-32 h-32 flex-shrink-0 flex items-center justify-center"
-        >
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-cover rounded"
-          />
+    <div className="bg-white border rounded-xl shadow-md hover:shadow-lg transition-all p-4 flex flex-col sm:flex-row gap-4">
+      {/* Left: Product Image */}
+      <Link
+        to={`/product/${product.id}`}
+        className="w-full sm:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden"
+      >
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover transition-transform hover:scale-105"
+        />
+      </Link>
+
+      {/* Right: Details & Button */}
+      <div className="flex flex-col justify-between flex-grow">
+        <Link to={`/product/${product.id}`}>
+          <h3 className="text-lg font-semibold text-gray-800 mb-1">{product.name}</h3>
+
+          <ul className="text-sm text-gray-600 space-y-0.5">
+            <li>
+              🌍 <span className="font-medium">Carbon:</span> {product.carbonScore} kg CO₂
+            </li>
+            <li>
+              📦 <span className="font-medium">Packaging:</span> {product.packaging}
+            </li>
+            <li>
+              📍 <span className="font-medium">Region:</span> {product.region}
+            </li>
+          </ul>
         </Link>
 
-        {/* Right Side: Content + Button */}
-        <div className="flex flex-col justify-between flex-grow">
-          {/* Content links to details */}
-          <Link to={`/product/${product.id}`} className="block">
-            <h3 className="text-lg font-bold">{product.name}</h3>
-            <p className="text-sm text-gray-600">
-              🌍 Carbon: {product.carbonScore}kg CO₂
-            </p>
-            <p className="text-sm text-gray-600">
-              📦 Packaging: {product.packaging}
-            </p>
-            <p className="text-sm text-gray-600">
-              📍 Region: {product.region}
-            </p>
-          </Link>
-
-          {/* Button aligned right */}
-          <div className="flex justify-end mt-3">
-            <button
-              onClick={() => onAdd(product)}
-              className="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700"
-            >
-              Add to Cart
-            </button>
-          </div>
+        {/* Quantity Button */}
+        <div className="flex justify-end mt-4">
+          <QuantityButton product={product} />
         </div>
       </div>
     </div>

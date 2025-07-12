@@ -6,7 +6,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Dashboard", path: "/dashboard", icon: <LayoutDashboard size={18} /> },
+    { name: "Dashboard", path: "/", icon: <LayoutDashboard size={18} /> }, // now routes to AllProducts
     { name: "Cart", path: "/cart", icon: <ShoppingCart size={18} /> },
   ];
 

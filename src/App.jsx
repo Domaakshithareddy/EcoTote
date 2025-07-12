@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
 import Cart from "./pages/Cart";
 import Leaderboard from "./pages/Leaderboard";
 import Rewards from "./pages/Rewards";
@@ -33,7 +32,6 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<AllProducts />} />
                 <Route path="/product/:productId" element={<ProductDetails />} />
-                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />
                 <Route path="/rewards" element={<Rewards />} />

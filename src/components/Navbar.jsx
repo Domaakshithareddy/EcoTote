@@ -11,6 +11,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "View Products", path: "/", icon: <LayoutDashboard size={18} /> },
     { name: "Cart", path: "/cart", icon: <ShoppingCart size={18} /> },
+    { name: "Profile", path: "/consumer", icon: <User size={18} /> },
   ];
 
   return (

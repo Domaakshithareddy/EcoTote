@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const MOCK_USER = {
-  email: "akshithareddydoma7@gmail.com",
-  password: "akshitha22",
+  email: "sparkathon@gmail.com",
+  password: "sparkathon",
 };
 
 const AuthPage = () => {

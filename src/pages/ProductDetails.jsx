@@ -12,26 +12,35 @@ const ProductDetails = () => {
   const [newReview, setNewReview] = useState("");
   const [rating, setRating] = useState(0);
   const [showReviewModal, setShowReviewModal] = useState(false);
+  const [altMap, setAltMap] = useState({});
 
   useEffect(() => {
-    fetchJSON("products.json").then((data) => {
-      setAllProducts(data);
-      const p = data.find((prod) => prod.id === productId);
-      setProduct(p);
-    });
+    const fetchData = async () => {
+      try {
+        const [productsData, reviewsData, altData] = await Promise.all([
+          fetchJSON("products.json"),
+          fetchJSON("reviews.json").catch(() => []),
+          fetchJSON("alternatives.json").catch(() => ({})),
+        ]);
 
-    fetchJSON("reviews.json").then(setReviews).catch(() => setReviews([]));
+        setAllProducts(productsData);
+        setReviews(reviewsData);
+        setAltMap(altData);
+
+        const currentProduct = productsData.find((prod) => prod.id === productId);
+        setProduct(currentProduct);
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
+
+    fetchData();
   }, [productId]);
 
   if (!product) return <p className="p-6 text-gray-500">Loading product details...</p>;
 
   const shuffled = [...reviews].sort(() => 0.5 - Math.random());
   const productReviews = shuffled.slice(0, 2);
-
-
-  const recommendations = allProducts
-    .filter((p) => p.category === product.category && p.id !== product.id)
-    .slice(0, 3);
 
   return (
     <PageWrapper>
@@ -49,7 +58,6 @@ const ProductDetails = () => {
 
           {/* Right: Product Info */}
           <div className="flex-1 space-y-6">
-            {/* Product Name, Seller, Price */}
             <div>
               <h1 className="text-3xl font-bold text-green-700">{product.name}</h1>
               <p className="text-sm text-gray-600 mt-1">
@@ -59,7 +67,6 @@ const ProductDetails = () => {
                 ₹{product.price.toLocaleString()}
               </p>
 
-              {/* Rating */}
               <div className="flex items-center gap-2 text-sm mt-1">
                 <div className="text-yellow-500 text-lg">
                   {"★".repeat(Math.floor(product.rating)) +
@@ -69,14 +76,12 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            {/* Other Info */}
             <div className="text-sm text-gray-700 space-y-1">
               <p><strong>Category:</strong> {product.category}</p>
               <p><strong>Region:</strong> {product.region}</p>
               <p><strong>Packaging:</strong> {product.packaging}</p>
             </div>
 
-            {/* Sustainability Box */}
             <div className="bg-green-50 border border-green-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-md font-semibold text-green-800 mb-2">Sustainability Details</h3>
               <ul className="list-disc ml-5 text-sm text-gray-800 space-y-1">
@@ -85,34 +90,74 @@ const ProductDetails = () => {
               </ul>
             </div>
 
-            {/* Add to Cart - placed at end */}
             <div className="pt-2">
               <QuantityButton product={product} />
             </div>
           </div>
         </div>
 
-        {/* Recommendations */}
-        <div className="mt-10">
-          <h2 className="text-xl font-semibold mb-4 text-gray-800">You Might Also Like</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recommendations.map((p) => (
-              <Link
-                to={`/product/${p.id}`}
-                key={p.id}
-                className="block p-4 bg-white rounded-lg shadow hover:bg-green-50 transition"
-              >
-                <h3 className="font-semibold text-lg mb-1">{p.name}</h3>
-                <p className="text-sm text-gray-700">₹{p.price.toLocaleString()}</p>
-                <p className="text-yellow-500 text-sm">
-                  {"★".repeat(Math.floor(p.rating)) +
-                    "☆".repeat(5 - Math.floor(p.rating))}{" "}
-                  ({p.reviews})
-                </p>
-              </Link>
-            ))}
+        {/* Greener Alternatives */}
+        {product && altMap[product.name] && (
+          <div className="mt-10">
+            <h2 className="text-xl font-semibold mb-4 text-green-800">Greener Alternatives</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {altMap[product.name]
+                .map((altName) => allProducts.find((p) => p.name === altName))
+                .filter(Boolean)
+                .map((alt) => (
+                  <div
+                    key={alt.id}
+                    className="bg-green-50 border border-green-500 rounded-xl shadow-sm hover:shadow-md transition-all p-4 flex flex-col sm:flex-row gap-4"
+                  >
+                    {/* Left: Product Image */}
+                    <Link
+                      to={`/product/${alt.id}`}
+                      className="w-full sm:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden"
+                    >
+                      <img
+                        src={alt.image}
+                        alt={alt.name}
+                        className="w-full h-full object-cover transition-transform hover:scale-105"
+                      />
+                    </Link>
+              
+                    {/* Right: Details & Button */}
+                    <div className="flex flex-col justify-between flex-grow">
+                      <Link to={`/product/${alt.id}`}>
+                        <h3 className="text-lg font-semibold text-black mb-1">
+                          ♻️ {alt.name}
+                        </h3>
+
+                        <ul className="text-sm text-green-900 space-y-0.5 mb-2">
+                          <li>
+                            <span className="font-medium">Price:</span> ₹{alt.price}
+                          </li>
+                          <li>
+                            <span className="font-medium">Seller:</span> {alt.seller}
+                          </li>
+                        </ul>
+              
+                        {/* Rating */}
+                        <div className="flex items-center text-sm text-yellow-500 mb-1">
+                          {Array.from({ length: 5 }, (_, i) => (
+                            <span key={i}>
+                              {i < Math.round(alt.rating) ? "★" : "☆"}
+                            </span>
+                          ))}
+                          <span className="text-green-800 ml-2">({alt.reviews} reviews)</span>
+                        </div>
+                      </Link>
+              
+                      {/* Quantity Button */}
+                      <div className="flex justify-end mt-2">
+                        <QuantityButton product={alt} />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Reviews Section */}
         <div className="mt-16">
@@ -122,7 +167,7 @@ const ProductDetails = () => {
             <p className="text-sm text-gray-600 mb-4">No reviews yet for this product.</p>
           ) : (
             <ul className="space-y-3 mb-4">
-              {productReviews.slice(0, 3).map((r, idx) => (
+              {productReviews.map((r, idx) => (
                 <li key={idx} className="bg-gray-100 p-3 rounded shadow text-sm">
                   <div className="text-yellow-400 mb-1 text-lg">
                     {"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}

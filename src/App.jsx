@@ -14,6 +14,8 @@ import AppProvider from "./context/AppProvider";
 import AllProducts from "./pages/AllProducts";
 import ProductDetails from "./pages/ProductDetails";
 import AuthPage from "./pages/AuthPage";
+import PlaceOrder from "./pages/PlaceOrder";
+import ChatBot from "./components/ChatBot";
 
 const App = () => {
   return (
@@ -40,11 +42,13 @@ const App = () => {
                 <Route path="/consumer" element={<Consumer />} />
                 <Route path="/recycle" element={<Recycle />} />
                 <Route path="/shop" element={<Shop />} />
+                <Route path="/place-order" element={<PlaceOrder />} />
               </Routes>
             </main>
 
             {/* Fun Fact Popup always visible */}
             <FunFactPopup />
+            <ChatBot />
           </div>
         </div>
       </AppProvider>

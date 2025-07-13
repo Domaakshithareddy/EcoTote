@@ -4,7 +4,7 @@ import {
   LayoutDashboard,
   Trophy,
   Gift,
-  Users,
+  User,
   Repeat,
   Menu,
   ChevronLeft,
@@ -15,7 +15,7 @@ const navItems = [
   { label: "View Products", icon: <LayoutDashboard />, to: "/" },
   { label: "Leaderboard", icon: <Trophy />, to: "/leaderboard" },
   { label: "Rewards", icon: <Gift />, to: "/rewards" },
-  { label: "Consumer", icon: <Users />, to: "/consumer" },
+  { label: "Profile", icon: <User />, to: "/consumer" },
   { label: "Recycle", icon: <Repeat />, to: "/recycle" },
 ];
 

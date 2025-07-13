@@ -8,6 +8,7 @@ import {
   Repeat,
   Menu,
   ChevronLeft,
+  Users,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -17,6 +18,7 @@ const navItems = [
   { label: "Rewards", icon: <Gift />, to: "/rewards" },
   { label: "Profile", icon: <User />, to: "/consumer" },
   { label: "Recycle", icon: <Repeat />, to: "/recycle" },
+  { label: "Become a Supplier", icon: <Users />, to: "/supplier-register" },
 ];
 
 const Sidebar = () => {

@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper";
+import confetti from "canvas-confetti";
 
 const PlaceOrder = () => {
   const { cart, setCart, setPurchaseOrders } = useContext(AppContext);
   const [selectedDelivery, setSelectedDelivery] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
 
   const handlePlaceOrder = () => {
@@ -23,8 +25,17 @@ const PlaceOrder = () => {
 
     setPurchaseOrders((prev) => [newOrder, ...prev]);
     setCart([]);
-    alert("✅ Order placed successfully!");
-    navigate("/consumer");
+    confetti({
+  particleCount: 150,
+  spread: 100,
+  origin: { y: 0.6 }
+});
+setShowPopup(true);
+setTimeout(() => {
+  setShowPopup(false);
+  navigate("/consumer");
+}, 3000);
+
   };
 
   return (
@@ -63,34 +74,35 @@ const PlaceOrder = () => {
         <div>
           <h2 className="text-xl font-bold text-green-800 mb-4">🚚 Choose Delivery</h2>
           <div className="space-y-4">
-            <label>
-              <input
-                type="radio"
-                name="delivery"
-                value="fast"
-                onChange={() => setSelectedDelivery("fast")}
-                className="mr-2"
-              />
-              <div className="bg-white p-4 rounded-lg border shadow hover:shadow-lg cursor-pointer">
-                <p className="font-semibold">Fast Delivery (1–2 Days)</p>
-                <p className="text-sm text-gray-600">🚨 Higher carbon emissions</p>
-              </div>
-            </label>
+  {[
+    {
+      type: "fast",
+      label: "Fast Delivery (1–2 Days)",
+      desc: "🚨 Higher carbon emissions",
+      textColor: "text-gray-600",
+    },
+    {
+      type: "slow",
+      label: "Slow Delivery (3–4 Days)",
+      desc: "🌱 Lower carbon footprint",
+      textColor: "text-green-600",
+    },
+  ].map((option) => (
+    <div
+      key={option.type}
+      onClick={() => setSelectedDelivery(option.type)}
+      className={`cursor-pointer p-4 rounded-lg border shadow hover:shadow-lg transition-all ${
+        selectedDelivery === option.type
+          ? "border-2 border-green-600 bg-green-50"
+          : "border-gray-200"
+      }`}
+    >
+      <p className="font-semibold text-gray-800">{option.label}</p>
+      <p className={`text-sm ${option.textColor}`}>{option.desc}</p>
+    </div>
+  ))}
+</div>
 
-            <label>
-              <input
-                type="radio"
-                name="delivery"
-                value="slow"
-                onChange={() => setSelectedDelivery("slow")}
-                className="mr-2"
-              />
-              <div className="bg-white p-4 rounded-lg border shadow hover:shadow-lg cursor-pointer">
-                <p className="font-semibold">Slow Delivery (3–4 Days)</p>
-                <p className="text-sm text-green-600">🌱 Lower carbon footprint</p>
-              </div>
-            </label>
-          </div>
 
           {/* Place Order Button */}
           <button
@@ -102,6 +114,15 @@ const PlaceOrder = () => {
           </button>
         </div>
       </div>
+      {showPopup && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+    <div className="bg-white rounded-xl shadow-2xl p-8 text-center w-80 border-4 border-green-600 animate-bounce">
+      <h2 className="text-2xl font-extrabold text-green-700 mb-2">🎉 Order Placed!</h2>
+      <p className="text-gray-700 text-sm">Thanks for making an eco-conscious choice!</p>
+    </div>
+  </div>
+)}
+
     </PageWrapper>
   );
 };

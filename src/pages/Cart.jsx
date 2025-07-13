@@ -5,6 +5,13 @@ import ReverseWasteSim from "../components/ReverseWasteSim";
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper";
+import {
+  ShoppingCart,
+  Package,
+  Recycle,
+  CheckCircle,
+  Globe,
+} from "lucide-react";
 
 const Cart = () => {
   const { cart, setCart } = useContext(AppContext);
@@ -68,8 +75,9 @@ const Cart = () => {
       <div className="p-6 max-w-5xl ml-60 mt-16 space-y-6">
         {/* Title & Swap All */}
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-extrabold text-green-800">
-            🛒 Your Cart's Eco Impact
+          <h1 className="text-3xl font-extrabold text-green-800 flex items-center gap-2">
+            <ShoppingCart className="text-green-700" size={28} />
+            Your Cart's Eco Impact
           </h1>
         </div>
 
@@ -81,10 +89,11 @@ const Cart = () => {
           <ReverseWasteSim wasteKg={totalCarbon * 0.015} />
         </div>
 
-        {/* 🛍 Cart Items */}
+        {/* Cart Items */}
         <div className="bg-white rounded-xl border shadow p-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            🛍 Products in Your Cart
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <Package className="text-green-700" size={22} />
+            Products in Your Cart
           </h2>
           {cart.length === 0 ? (
             <p className="text-sm text-gray-600">Your cart is empty.</p>
@@ -98,7 +107,9 @@ const Cart = () => {
                   >
                     <div className="flex justify-between items-center">
                       <div>
-                        <h3 className="font-semibold text-gray-800">{item.name}</h3>
+                        <h3 className="font-semibold text-gray-800">
+                          {item.name}
+                        </h3>
                         <p className="text-sm text-gray-500">
                           Carbon: {item.carbonScore} g CO₂ × {item.quantity}
                         </p>
@@ -114,22 +125,24 @@ const Cart = () => {
           )}
         </div>
 
-        {/* ♻️ Swap Suggestions */}
+        {/* Eco-Friendly Swaps */}
         {cart.some((item) => alternatives[item.name]) && (
           <div className="border-2 border-green-400 bg-green-50 rounded-xl p-6">
             <div className="flex justify-between items-center mb-4">
-  <h2 className="text-xl font-semibold text-green-800">
-    ♻️ Eco-Friendly Swaps Available
-  </h2>
-  {cart.length > 0 && (
-    <button
-      onClick={handleSwapAll}
-      className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
-    >
-      ♻️ Swap All
-    </button>
-  )}
-</div>
+              <h2 className="text-xl font-semibold text-green-800 flex items-center gap-2">
+                <Recycle className="text-green-700" size={20} />
+                Eco-Friendly Swaps Available
+              </h2>
+              {cart.length > 0 && (
+                <button
+                  onClick={handleSwapAll}
+                  className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 flex items-center gap-2"
+                >
+                  <Globe size={18} />
+                  Swap All
+                </button>
+              )}
+            </div>
 
             <ul className="space-y-3">
               {cart.map((item, index) => {
@@ -142,9 +155,14 @@ const Cart = () => {
                 if (!altItem || swappedItems.includes(item.name)) return null;
 
                 return (
-                  <li key={index} className="bg-white p-4 rounded-xl shadow-sm border flex justify-between items-center">
+                  <li
+                    key={index}
+                    className="bg-white p-4 rounded-xl shadow-sm border flex justify-between items-center"
+                  >
                     <div>
-                      <h3 className="font-semibold text-gray-800">{altItem.name}</h3>
+                      <h3 className="font-semibold text-gray-800">
+                        {altItem.name}
+                      </h3>
                       <p className="text-sm text-gray-600">
                         Carbon: {altItem.carbonScore} g CO₂ × {item.quantity}
                       </p>
@@ -161,17 +179,19 @@ const Cart = () => {
             </ul>
           </div>
         )}
-        {/* ✅ Place Order Button */}
-{cart.length > 0 && (
-  <div className="flex justify-center">
-    <Link
-      to="/place-order"
-      className="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg shadow"
-    >
-      ✅ Place Order
-    </Link>
-  </div>
-)}
+
+        {/* Place Order */}
+        {cart.length > 0 && (
+          <div className="flex justify-center">
+            <Link
+              to="/place-order"
+              className="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg shadow flex items-center gap-2"
+            >
+              <CheckCircle size={20} />
+              Place Order
+            </Link>
+          </div>
+        )}
       </div>
     </PageWrapper>
   );

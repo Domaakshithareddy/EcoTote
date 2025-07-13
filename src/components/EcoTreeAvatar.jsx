@@ -3,7 +3,7 @@ import happyTree from "../assets/good-earth.jpeg";
 import sadTree from "../assets/bad-earth.jpeg";
 
 const EcoTreeAvatar = ({ totalCarbon }) => {
-    const treeImage = totalCarbon < 50 ? happyTree : sadTree;
+    const treeImage = totalCarbon < 65 ? happyTree : sadTree;
     return (
         <div className="flex flex-col items-center">
             <img src={treeImage} alt="Eco Tree" className="w-40 h-40" />

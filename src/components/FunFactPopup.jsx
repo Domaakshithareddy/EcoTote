@@ -2,6 +2,15 @@ import React, { useEffect, useState } from "react";
 import fetchJSON from "../utils/fetchJSON";
 import { FaLeaf } from "react-icons/fa";
 
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const FunFactPopup = () => {
   const [facts, setFacts] = useState([]);
   const [factIndex, setFactIndex] = useState(0);
@@ -9,7 +18,8 @@ const FunFactPopup = () => {
 
   useEffect(() => {
     fetchJSON("funFacts.json").then((data) => {
-      setFacts(data);
+      const shuffled = shuffleArray(data);
+      setFacts(shuffled);
       setVisible(true); // Slide in first
     });
   }, []);
@@ -44,7 +54,7 @@ const FunFactPopup = () => {
       }`}
     >
       <div className="flex items-start gap-3">
-        <FaLeaf className="text-green-600 mt-1 text-lg" />
+        <FaLeaf className="text-green-600 text-2xl" />
         <div>
           <p className="text-sm font-semibold text-green-800">Did you know?</p>
           <p className="text-xs text-gray-700 mt-1 leading-snug">{currentFact}</p>

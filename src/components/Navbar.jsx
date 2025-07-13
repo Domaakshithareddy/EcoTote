@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart, LayoutDashboard, User } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,9 +17,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-green-700 text-white shadow-md px-6 h-16 flex items-center justify-between">
-      {/* Logo */}
-      <div className="flex items-center gap-2 text-xl font-bold">
-        <span role="img" aria-label="logo">🌱</span>
+      {/* Logo with image */}
+      <div className="flex items-center gap-3 text-xl font-bold">
+        <img
+          src={logo}
+          alt="EcoTote Logo"
+          className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
+        />
         <span>EcoTote</span>
       </div>
 

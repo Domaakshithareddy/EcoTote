@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import fetchJSON from "../utils/fetchJSON";
 import PageWrapper from "../components/PageWrapper";
-import { Crown, Medal } from "lucide-react"; // Optional if using lucide for icons
+import { Crown } from "lucide-react";
 
 const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
@@ -22,8 +22,9 @@ const Leaderboard = () => {
   return (
     <PageWrapper>
       <div className="ml-60 mt-16 p-6 max-w-5xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-center text-green-700 mb-14 tracking-tight">
-          🏆 Eco Leaderboard – Bengaluru
+        <h1 className="text-4xl font-extrabold text-center text-green-700 mb-14 tracking-tight flex justify-center items-center gap-3">
+          <Crown className="w-8 h-8 text-green-700" />
+          Eco Leaderboard
         </h1>
 
         {/* Podium */}

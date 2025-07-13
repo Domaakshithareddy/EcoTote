@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import PageWrapper from "../components/PageWrapper";
 import { AppContext } from "../context/AppContext";
+import badgeImg from "../assets/badge.jpeg";
 
 const Consumer = () => {
   const { purchaseOrders } = useContext(AppContext);
@@ -45,7 +46,7 @@ const Consumer = () => {
             </div>
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-green-800">
-                CO₂ Saved This Week
+                CO₂ Saved This Year
               </h3>
               <p className="text-sm text-gray-600">
                 You've saved <strong>2.4 kg</strong> of CO₂!
@@ -64,7 +65,7 @@ const Consumer = () => {
               Your Current Badge
             </h3>
             <img
-              src="/images/green-supporter-badge.png"
+              src={badgeImg}
               alt="Green Supporter Badge"
               className="w-24 h-24 object-contain"
             />

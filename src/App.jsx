@@ -16,6 +16,7 @@ import ProductDetails from "./pages/ProductDetails";
 import AuthPage from "./pages/AuthPage";
 import PlaceOrder from "./pages/PlaceOrder";
 import ChatBot from "./components/ChatBot";
+import SupplierRegister from "./pages/SupplierRegister";
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
                 <Route path="/recycle" element={<Recycle />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/place-order" element={<PlaceOrder />} />
+                <Route path="/supplier-register" element={<SupplierRegister />} />
               </Routes>
             </main>
 

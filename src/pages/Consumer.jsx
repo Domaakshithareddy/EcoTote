@@ -5,7 +5,7 @@ import PageWrapper from "../components/PageWrapper";
 const Consumer = () => {
   return (
     <PageWrapper>
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white ml-60 mt-16 p-6">
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-3xl font-extrabold text-green-800 flex items-center gap-2 drop-shadow">

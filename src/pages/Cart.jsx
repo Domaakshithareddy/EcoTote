@@ -26,7 +26,7 @@ const Cart = () => {
 
   return (
     <PageWrapper>
-      <div className="p-6 max-w-5xl mx-auto space-y-6">
+      <div className="p-6 max-w-5xl mx-auto space-y-6 ml-60 mt-16">
         {/* Page Title */}
         <h1 className="text-3xl font-extrabold text-green-800">
           🛒 Your Cart's Eco Impact

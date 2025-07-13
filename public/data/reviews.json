@@ -1,0 +1,52 @@
+[
+  {
+    "productId": "p001",
+    "rating": 5,
+    "text": "Great quality and eco-friendly!"
+  },
+  {
+    "productId": "p002",
+    "rating": 4,
+    "text": "Very sustainable and works well."
+  },
+  {
+    "productId": "p003",
+    "rating": 5,
+    "text": "Excellent alternative, love the compostable packaging!"
+  },
+  {
+    "productId": "p004",
+    "rating": 4,
+    "text": "Lightweight and recyclable – good buy."
+  },
+  {
+    "productId": "p005",
+    "rating": 5,
+    "text": "Durable and sustainable. Will buy again!"
+  },
+  {
+    "productId": "p006",
+    "rating": 4,
+    "text": "Eco-conscious and value for money."
+  },
+  {
+    "productId": "p007",
+    "rating": 5,
+    "text": "Highly recommended for a greener switch."
+  },
+  {
+    "productId": "p008",
+    "rating": 3,
+    "text": "Okay product, good sustainability effort."
+  },
+  {
+    "productId": "p009",
+    "rating": 4,
+    "text": "Feels premium and climate-friendly."
+  },
+  {
+    "productId": "p010",
+    "rating": 5,
+    "text": "Plastic-free and biodegradable. Perfect!"
+  }
+]

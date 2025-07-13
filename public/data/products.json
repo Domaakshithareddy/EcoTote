@@ -1,16 +1,20 @@
 [
   {
-  "id": "p001",
-  "name": "Bamboo Toothbrush",
-  "carbonScore": 12,
-  "category": "Personal Care",
-  "subCategory": "Toiletries",
-  "region": "India",
-  "packaging": "Compostable Paper",
-  "greenAlt": null,
-  "image": "/images/graceful-bamboo2.jpg"
-}
-,
+    "id": "p001",
+    "name": "Bamboo Toothbrush",
+    "carbonScore": 12,
+    "category": "Personal Care",
+    "subCategory": "Toiletries",
+    "region": "India",
+    "packaging": "Compostable Paper",
+    "greenAlt": null,
+    "image": "/images/Bamboo Toothbrush.jpg",
+    "price": 647,
+    "seller": "EcoWave",
+    "rating": 4.8,
+    "reviews": 288,
+    "stock": 70
+  },
   {
     "id": "p002",
     "name": "Organic Cotton T-Shirt",
@@ -20,7 +24,12 @@
     "region": "India",
     "packaging": "Recycled Paper",
     "greenAlt": null,
-    "image":""
+    "image": "/images/Organic Cotton T-Shirt.jpg",
+    "price": 1022,
+    "seller": "NatureNest",
+    "rating": 4.1,
+    "reviews": 61,
+    "stock": 31
   },
   {
     "id": "p003",
@@ -30,7 +39,13 @@
     "subCategory": "Food Storage",
     "region": "India",
     "packaging": "Cotton Pouch",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Beeswax Food Wraps (Set of 3).jpg",
+    "price": 325,
+    "seller": "GreenRoots",
+    "rating": 4.5,
+    "reviews": 201,
+    "stock": 64
   },
   {
     "id": "p004",
@@ -40,7 +55,13 @@
     "subCategory": "Bottled Drinks",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Stainless Steel Water Bottle.jpg",
+    "price": 629,
+    "seller": "GreenRoots",
+    "rating": 4.4,
+    "reviews": 277,
+    "stock": 68
   },
   {
     "id": "p005",
@@ -50,7 +71,13 @@
     "subCategory": "Staple",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Basmati Rice jute bag.jpg",
+    "price": 1230,
+    "seller": "EcoZone",
+    "rating": 3.5,
+    "reviews": 205,
+    "stock": 19
   },
   {
     "id": "p006",
@@ -60,7 +87,13 @@
     "subCategory": "Tableware",
     "region": "India",
     "packaging": "Bamboo Fiber",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Coconut Shell Bowl.jpg",
+    "price": 602,
+    "seller": "SunSpark",
+    "rating": 4.5,
+    "reviews": 277,
+    "stock": 18
   },
   {
     "id": "p007",
@@ -70,7 +103,13 @@
     "subCategory": "Hygiene",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": "Menstrual Cup"
+    "greenAlt": "Menstrual Cup",
+    "image": "/images/Biodegradable Sanitary Pads (Pack of 10).jpg",
+    "price": 380,
+    "seller": "GreenLeaf",
+    "rating": 4.6,
+    "reviews": 148,
+    "stock": 79
   },
   {
     "id": "p008",
@@ -80,7 +119,13 @@
     "subCategory": "Notebooks",
     "region": "India",
     "packaging": "Recycled Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Recycled Paper Notebook (A5).jpg",
+    "price": 914,
+    "seller": "EcoZone",
+    "rating": 4.6,
+    "reviews": 272,
+    "stock": 79
   },
   {
     "id": "p009",
@@ -90,7 +135,13 @@
     "subCategory": "Oil",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Coconut Oil (Glass Jar).jpeg",
+    "price": 1470,
+    "seller": "NatureNest",
+    "rating": 4.9,
+    "reviews": 198,
+    "stock": 44
   },
   {
     "id": "p010",
@@ -100,7 +151,13 @@
     "subCategory": "Utensils",
     "region": "India",
     "packaging": "Cotton Bag",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Straw Set (6 Pieces).jpeg",
+    "price": 637,
+    "seller": "NatureNest",
+    "rating": 4.4,
+    "reviews": 125,
+    "stock": 79
   },
   {
     "id": "p011",
@@ -110,7 +167,13 @@
     "subCategory": "Writing",
     "region": "India",
     "packaging": "Recycled Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Plantable Seed Pencils (Pack of 10).jpeg",
+    "price": 855,
+    "seller": "BioBasics",
+    "rating": 3.9,
+    "reviews": 220,
+    "stock": 45
   },
   {
     "id": "p012",
@@ -120,7 +183,13 @@
     "subCategory": "Organic",
     "region": "India",
     "packaging": "Paper Pouch",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Turmeric Powder.jpeg",
+    "price": 1378,
+    "seller": "VerdantCart",
+    "rating": 4.3,
+    "reviews": 230,
+    "stock": 56
   },
   {
     "id": "p013",
@@ -130,7 +199,13 @@
     "subCategory": "Food Storage",
     "region": "India",
     "packaging": "Cotton",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Reusable Cotton Produce Bags (Set of 5).jpeg",
+    "price": 179,
+    "seller": "PurePlanet",
+    "rating": 4.0,
+    "reviews": 224,
+    "stock": 18
   },
   {
     "id": "p014",
@@ -140,7 +215,13 @@
     "subCategory": "Bottled Drinks",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Copper Water Bottle.jpeg",
+    "price": 361,
+    "seller": "NatureNest",
+    "rating": 3.6,
+    "reviews": 215,
+    "stock": 15
   },
   {
     "id": "p015",
@@ -150,7 +231,13 @@
     "subCategory": "Cleaning",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Eco-Friendly Dishwashing Soap Bar.jpeg",
+    "price": 733,
+    "seller": "PurePlanet",
+    "rating": 4.7,
+    "reviews": 253,
+    "stock": 31
   },
   {
     "id": "p016",
@@ -160,7 +247,13 @@
     "subCategory": "Bedding",
     "region": "India",
     "packaging": "Recycled Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Bed Sheet (Queen).jpeg",
+    "price": 1496,
+    "seller": "GreenRoots",
+    "rating": 3.7,
+    "reviews": 169,
+    "stock": 54
   },
   {
     "id": "p017",
@@ -170,7 +263,13 @@
     "subCategory": "Utensils",
     "region": "India",
     "packaging": "Cotton Pouch",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Reusable Bamboo Cutlery Set.jpeg",
+    "price": 554,
+    "seller": "BioBasics",
+    "rating": 3.7,
+    "reviews": 156,
+    "stock": 13
   },
   {
     "id": "p018",
@@ -180,7 +279,13 @@
     "subCategory": "Tea",
     "region": "India",
     "packaging": "Paper Tin",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Green Tea (Loose Leaf).jpeg",
+    "price": 714,
+    "seller": "GreenRoots",
+    "rating": 4.6,
+    "reviews": 73,
+    "stock": 34
   },
   {
     "id": "p019",
@@ -190,7 +295,13 @@
     "subCategory": "Waste Management",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Compostable Garbage Bags (Pack of 30).jpeg",
+    "price": 579,
+    "seller": "NatureNest",
+    "rating": 4.5,
+    "reviews": 104,
+    "stock": 54
   },
   {
     "id": "p020",
@@ -200,7 +311,12 @@
     "subCategory": "Wallets",
     "region": "India",
     "packaging": "Recycled Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Vegan Leather Wallet.jpeg",
+    "seller": "Sustainix",
+    "rating": 3.6,
+    "reviews": 81,
+    "stock": 34
   },
   {
     "id": "p021",
@@ -210,7 +326,13 @@
     "subCategory": "Sweeteners",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Jaggery (Block).jpeg",
+    "price": 1233,
+    "seller": "BioBasics",
+    "rating": 4.0,
+    "reviews": 298,
+    "stock": 21
   },
   {
     "id": "p022",
@@ -220,7 +342,13 @@
     "subCategory": "Hair",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Hairbrush.jpeg",
+    "price": 412,
+    "seller": "NatureNest",
+    "rating": 4.2,
+    "reviews": 80,
+    "stock": 19
   },
   {
     "id": "p023",
@@ -230,7 +358,13 @@
     "subCategory": "Gifting",
     "region": "India",
     "packaging": "None",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Recycled Paper Gift Wrap.jpeg",
+    "price": 1235,
+    "seller": "EcoWave",
+    "rating": 4.5,
+    "reviews": 179,
+    "stock": 14
   },
   {
     "id": "p024",
@@ -240,7 +374,13 @@
     "subCategory": "Masks",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Face Mask.jpeg",
+    "price": 985,
+    "seller": "EcoZone",
+    "rating": 4.7,
+    "reviews": 243,
+    "stock": 27
   },
   {
     "id": "p025",
@@ -250,7 +390,13 @@
     "subCategory": "Utensils",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Wooden Chopping Board.jpeg",
+    "price": 701,
+    "seller": "SunSpark",
+    "rating": 4.3,
+    "reviews": 187,
+    "stock": 12
   },
   {
     "id": "p026",
@@ -260,7 +406,13 @@
     "subCategory": "Pulses",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Moong Dal.jpeg",
+    "price": 891,
+    "seller": "EcoCrate",
+    "rating": 4.2,
+    "reviews": 189,
+    "stock": 36
   },
   {
     "id": "p027",
@@ -270,7 +422,13 @@
     "subCategory": "Bath",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Loofah Sponge.jpeg",
+    "price": 1095,
+    "seller": "GreenHive",
+    "rating": 3.9,
+    "reviews": 84,
+    "stock": 26
   },
   {
     "id": "p028",
@@ -280,7 +438,13 @@
     "subCategory": "Yoga",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": "Cork Yoga Mat"
+    "greenAlt": "Cork Yoga Mat",
+    "image": "/images/Recycled Plastic Yoga Mat.jpeg",
+    "price": 740,
+    "seller": "EcoBliss",
+    "rating": 4.6,
+    "reviews": 110,
+    "stock": 44
   },
   {
     "id": "p029",
@@ -290,7 +454,13 @@
     "subCategory": "Bags",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Tote Bag.jpeg",
+    "price": 658,
+    "seller": "NatureWise",
+    "rating": 4.0,
+    "reviews": 162,
+    "stock": 57
   },
   {
     "id": "p030",
@@ -300,7 +470,13 @@
     "subCategory": "Cleaning",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Eco-Friendly Laundry Detergent Sheets.jpeg",
+    "price": 1120,
+    "seller": "GreenThrive",
+    "rating": 4.8,
+    "reviews": 129,
+    "stock": 62
   },
   {
     "id": "p031",
@@ -310,7 +486,13 @@
     "subCategory": "Coffee",
     "region": "India",
     "packaging": "Paper Tin",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Coffee Beans.jpeg",
+    "price": 785,
+    "seller": "EarthEco",
+    "rating": 4.3,
+    "reviews": 178,
+    "stock": 47
   },
   {
     "id": "p032",
@@ -320,7 +502,13 @@
     "subCategory": "Eyewear",
     "region": "India",
     "packaging": "Recycled Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Sunglasses.jpeg",
+    "price": 515,
+    "seller": "SustainMart",
+    "rating": 3.8,
+    "reviews": 193,
+    "stock": 22
   },
   {
     "id": "p033",
@@ -330,7 +518,13 @@
     "subCategory": "Coffee",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Compostable Coffee Pods.jpeg",
+    "price": 899,
+    "seller": "EcoCrate",
+    "rating": 4.7,
+    "reviews": 248,
+    "stock": 58
   },
   {
     "id": "p034",
@@ -340,7 +534,13 @@
     "subCategory": "Accessories",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Socks (Pack of 3).jpeg",
+    "price": 312,
+    "seller": "GreenHive",
+    "rating": 4.1,
+    "reviews": 97,
+    "stock": 33
   },
   {
     "id": "p035",
@@ -350,7 +550,13 @@
     "subCategory": "Toys",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Wooden Toy Set for Kids.jpeg",
+    "price": 620,
+    "seller": "PureBloom",
+    "rating": 4.4,
+    "reviews": 143,
+    "stock": 50
   },
   {
     "id": "p036",
@@ -360,7 +566,13 @@
     "subCategory": "Nuts",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Almonds (Glass Jar).jpeg",
+    "price": 479,
+    "seller": "EcoRise",
+    "rating": 3.5,
+    "reviews": 205,
+    "stock": 24
   },
   {
     "id": "p037",
@@ -370,7 +582,13 @@
     "subCategory": "Office",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Desk Organizer.jpeg",
+    "price": 1338,
+    "seller": "BioCart",
+    "rating": 4.6,
+    "reviews": 216,
+    "stock": 38
   },
   {
     "id": "p038",
@@ -380,7 +598,13 @@
     "subCategory": "Candles",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Soy Wax Candle.jpeg",
+    "price": 560,
+    "seller": "EcoStream",
+    "rating": 4.2,
+    "reviews": 174,
+    "stock": 41
   },
   {
     "id": "p039",
@@ -390,7 +614,13 @@
     "subCategory": "Bathroom",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Bath Towel.jpeg",
+    "price": 825,
+    "seller": "SustainMart",
+    "rating": 4.3,
+    "reviews": 151,
+    "stock": 55
   },
   {
     "id": "p040",
@@ -400,7 +630,13 @@
     "subCategory": "Food Storage",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Reusable Silicone Food Storage Bag.jpeg",
+    "price": 1005,
+    "seller": "NatureWise",
+    "rating": 4.5,
+    "reviews": 223,
+    "stock": 32
   },
   {
     "id": "p041",
@@ -410,7 +646,13 @@
     "subCategory": "Pulses",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Masoor Dal.jpeg",
+    "price": 930,
+    "seller": "EcoBliss",
+    "rating": 3.7,
+    "reviews": 91,
+    "stock": 18
   },
   {
     "id": "p042",
@@ -420,7 +662,13 @@
     "subCategory": "Notebooks",
     "region": "India",
     "packaging": "Recycled Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Cork Notebook.jpg",
+    "price": 690,
+    "seller": "GreenThrive",
+    "rating": 4.1,
+    "reviews": 184,
+    "stock": 60
   },
   {
     "id": "p043",
@@ -430,7 +678,13 @@
     "subCategory": "Sweeteners",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Honey (Glass Jar).jpeg",
+    "price": 475,
+    "seller": "EcoCrate",
+    "rating": 3.9,
+    "reviews": 99,
+    "stock": 26
   },
   {
     "id": "p044",
@@ -440,7 +694,13 @@
     "subCategory": "Office",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Laptop Stand.jpeg",
+    "price": 1320,
+    "seller": "BioCart",
+    "rating": 4.6,
+    "reviews": 243,
+    "stock": 49
   },
   {
     "id": "p045",
@@ -450,7 +710,13 @@
     "subCategory": "Accessories",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Apron.jpeg",
+    "price": 720,
+    "seller": "GreenHive",
+    "rating": 4.2,
+    "reviews": 153,
+    "stock": 52
   },
   {
     "id": "p046",
@@ -460,7 +726,13 @@
     "subCategory": "Rugs",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Jute Floor Mat.jpeg",
+    "price": 980,
+    "seller": "PureBloom",
+    "rating": 4.0,
+    "reviews": 105,
+    "stock": 34
   },
   {
     "id": "p047",
@@ -470,7 +742,13 @@
     "subCategory": "Dairy",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Ghee (Glass Jar).jpeg",
+    "price": 610,
+    "seller": "EarthEco",
+    "rating": 4.3,
+    "reviews": 166,
+    "stock": 37
   },
   {
     "id": "p048",
@@ -480,7 +758,13 @@
     "subCategory": "Utensils",
     "region": "India",
     "packaging": "Cotton Pouch",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Kitchen Utensil Set.jpeg",
+    "price": 1435,
+    "seller": "GreenThrive",
+    "rating": 4.9,
+    "reviews": 278,
+    "stock": 39
   },
   {
     "id": "p049",
@@ -490,7 +774,13 @@
     "subCategory": "Gifting",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Recycled Paper Postcards (Pack of 10).jpeg",
+    "price": 349,
+    "seller": "EcoRise",
+    "rating": 3.6,
+    "reviews": 76,
+    "stock": 15
   },
   {
     "id": "p050",
@@ -500,7 +790,13 @@
     "subCategory": "Accessories",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Handkerchiefs (Pack of 6).jpeg",
+    "price": 565,
+    "seller": "SustainMart",
+    "rating": 4.4,
+    "reviews": 194,
+    "stock": 30
   },
   {
     "id": "p051",
@@ -510,7 +806,13 @@
     "subCategory": "Bottled Drinks",
     "region": "India",
     "packaging": "Plastic",
-    "greenAlt": "Reusable Stainless Steel Bottle"
+    "greenAlt": "Reusable Stainless Steel Bottle",
+    "image": "/images/Plastic Water Bottle.jpg",
+    "price": 875,
+    "seller": "EcoThrive",
+    "rating": 4.1,
+    "reviews": 142,
+    "stock": 29
   },
   {
     "id": "p052",
@@ -520,7 +822,13 @@
     "subCategory": "Organic",
     "region": "India",
     "packaging": "None",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Mangoes (Loose).jpeg",
+    "price": 1299,
+    "seller": "GreenCart",
+    "rating": 4.7,
+    "reviews": 205,
+    "stock": 61
   },
   {
     "id": "p053",
@@ -530,7 +838,13 @@
     "subCategory": "Coffee",
     "region": "India",
     "packaging": "Plastic",
-    "greenAlt": "Glass Jar Coffee"
+    "greenAlt": "Glass Jar Coffee",
+    "image": "/images/Instant Coffee (Plastic Jar).jpeg",
+    "price": 390,
+    "seller": "EarthSense",
+    "rating": 3.9,
+    "reviews": 112,
+    "stock": 24
   },
   {
     "id": "p054",
@@ -540,7 +854,13 @@
     "subCategory": "Milk",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Milk (Glass Bottle).jpeg",
+    "price": 1135,
+    "seller": "EcoCrate",
+    "rating": 4.6,
+    "reviews": 231,
+    "stock": 43
   },
   {
     "id": "p055",
@@ -550,7 +870,13 @@
     "subCategory": "Chips",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Compostable Snack Bag.jpeg",
+    "price": 690,
+    "seller": "NatureWise",
+    "rating": 4.2,
+    "reviews": 156,
+    "stock": 32
   },
   {
     "id": "p056",
@@ -560,7 +886,13 @@
     "subCategory": "Organic",
     "region": "India",
     "packaging": "None",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Tomatoes (Loose).jpeg",
+    "price": 950,
+    "seller": "SustainMart",
+    "rating": 4.3,
+    "reviews": 198,
+    "stock": 48
   },
   {
     "id": "p057",
@@ -570,7 +902,13 @@
     "subCategory": "Toiletries",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Toothpaste Tablets (Glass Jar).jpeg",
+    "price": 525,
+    "seller": "EcoStream",
+    "rating": 3.7,
+    "reviews": 84,
+    "stock": 19
   },
   {
     "id": "p058",
@@ -580,7 +918,13 @@
     "subCategory": "Cleaning",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Reusable Cotton Cleaning Cloth.jpeg",
+    "price": 1080,
+    "seller": "GreenHive",
+    "rating": 4.5,
+    "reviews": 187,
+    "stock": 54
   },
   {
     "id": "p059",
@@ -590,7 +934,13 @@
     "subCategory": "Fruits",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Frozen Berries.jpeg",
+    "price": 745,
+    "seller": "EarthEco",
+    "rating": 4.0,
+    "reviews": 132,
+    "stock": 27
   },
   {
     "id": "p060",
@@ -600,7 +950,13 @@
     "subCategory": "Cleaning",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Powder Detergent (Cardboard Box).jpeg",
+    "price": 360,
+    "seller": "EcoBliss",
+    "rating": 3.6,
+    "reviews": 75,
+    "stock": 22
   },
   {
     "id": "p061",
@@ -610,7 +966,13 @@
     "subCategory": "Yogurt",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Yogurt (Glass Jar).jpeg",
+    "price": 1210,
+    "seller": "BioCart",
+    "rating": 4.8,
+    "reviews": 244,
+    "stock": 46
   },
   {
     "id": "p062",
@@ -620,7 +982,13 @@
     "subCategory": "Staple",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Wheat Flour (Jute Bag).jpeg",
+    "price": 599,
+    "seller": "GreenCart",
+    "rating": 4.1,
+    "reviews": 137,
+    "stock": 38
   },
   {
     "id": "p063",
@@ -630,7 +998,13 @@
     "subCategory": "Oil",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Sunflower Oil (Glass Bottle).jpg",
+    "price": 810,
+    "seller": "EcoThrive",
+    "rating": 3.9,
+    "reviews": 115,
+    "stock": 31
   },
   {
     "id": "p064",
@@ -640,7 +1014,13 @@
     "subCategory": "Hair",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Shampoo Bar.jpeg",
+    "price": 705,
+    "seller": "PureBloom",
+    "rating": 4.2,
+    "reviews": 123,
+    "stock": 33
   },
   {
     "id": "p065",
@@ -650,7 +1030,13 @@
     "subCategory": "Utensils",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Stainless Steel Cutlery Set.jpeg",
+    "price": 1360,
+    "seller": "EcoRise",
+    "rating": 4.7,
+    "reviews": 267,
+    "stock": 51
   },
   {
     "id": "p066",
@@ -660,7 +1046,13 @@
     "subCategory": "Drinks",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Lemonade (Glass Bottle).jpeg",
+    "price": 460,
+    "seller": "GreenHive",
+    "rating": 3.5,
+    "reviews": 97,
+    "stock": 21
   },
   {
     "id": "p067",
@@ -670,7 +1062,13 @@
     "subCategory": "Biscuits",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cookies (Paper Box).jpg",
+    "price": 670,
+    "seller": "EarthSense",
+    "rating": 4.0,
+    "reviews": 142,
+    "stock": 36
   },
   {
     "id": "p068",
@@ -680,7 +1078,13 @@
     "subCategory": "Cheese",
     "region": "India",
     "packaging": "Compostable",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Fresh Paneer (Cloth Wrap).jpeg",
+    "price": 1185,
+    "seller": "GreenThrive",
+    "rating": 4.6,
+    "reviews": 220,
+    "stock": 58
   },
   {
     "id": "p069",
@@ -690,7 +1094,13 @@
     "subCategory": "Sweeteners",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Sugar (Paper Bag).jpeg",
+    "price": 810,
+    "seller": "SustainMart",
+    "rating": 4.3,
+    "reviews": 162,
+    "stock": 42
   },
   {
     "id": "p070",
@@ -700,7 +1110,13 @@
     "subCategory": "Tableware",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Coasters (Set of 4).jpeg",
+    "price": 985,
+    "seller": "EcoCrate",
+    "rating": 4.4,
+    "reviews": 195,
+    "stock": 47
   },
   {
     "id": "p071",
@@ -710,7 +1126,13 @@
     "subCategory": "Clothing",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Baby Onesie.jpeg",
+    "price": 640,
+    "seller": "NatureWise",
+    "rating": 3.8,
+    "reviews": 111,
+    "stock": 28
   },
   {
     "id": "p072",
@@ -720,7 +1142,13 @@
     "subCategory": "Gifting",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Recycled Paper Greeting Cards (Pack of 5).jpeg",
+    "price": 1430,
+    "seller": "GreenCart",
+    "rating": 4.9,
+    "reviews": 285,
+    "stock": 35
   },
   {
     "id": "p073",
@@ -730,7 +1158,13 @@
     "subCategory": "Organic",
     "region": "India",
     "packaging": "Paper Pouch",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Black Pepper.jpeg",
+    "price": 555,
+    "seller": "EcoStream",
+    "rating": 3.6,
+    "reviews": 88,
+    "stock": 17
   },
   {
     "id": "p074",
@@ -740,7 +1174,13 @@
     "subCategory": "Drinkware",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Travel Mug.jpeg",
+    "price": 975,
+    "seller": "EcoThrive",
+    "rating": 4.1,
+    "reviews": 170,
+    "stock": 39
   },
   {
     "id": "p075",
@@ -750,7 +1190,13 @@
     "subCategory": "Curtains",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Curtains.jpeg",
+    "price": 1150,
+    "seller": "PureBloom",
+    "rating": 4.5,
+    "reviews": 213,
+    "stock": 50
   },
   {
     "id": "p076",
@@ -760,7 +1206,13 @@
     "subCategory": "Fragrance",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Incense Sticks (Pack of 20).jpeg",
+    "price": 830,
+    "seller": "EcoThrive",
+    "rating": 4.2,
+    "reviews": 159,
+    "stock": 31
   },
   {
     "id": "p077",
@@ -770,7 +1222,13 @@
     "subCategory": "Pulses",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Chickpeas.jpeg",
+    "price": 1245,
+    "seller": "GreenHive",
+    "rating": 4.7,
+    "reviews": 208,
+    "stock": 49
   },
   {
     "id": "p078",
@@ -780,7 +1238,13 @@
     "subCategory": "Electronics",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Phone Stand.jpeg",
+    "price": 490,
+    "seller": "EarthSense",
+    "rating": 3.9,
+    "reviews": 101,
+    "stock": 24
   },
   {
     "id": "p079",
@@ -790,7 +1254,13 @@
     "subCategory": "Bedding",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Pillowcase.jpeg",
+    "price": 1120,
+    "seller": "EcoCrate",
+    "rating": 4.6,
+    "reviews": 229,
+    "stock": 44
   },
   {
     "id": "p080",
@@ -800,7 +1270,13 @@
     "subCategory": "Baking",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Reusable Silicone Baking Mat.jpeg",
+    "price": 670,
+    "seller": "NatureWise",
+    "rating": 4.1,
+    "reviews": 133,
+    "stock": 26
   },
   {
     "id": "p081",
@@ -810,7 +1286,13 @@
     "subCategory": "Nuts",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cashews (Glass Jar).jpeg",
+    "price": 910,
+    "seller": "SustainMart",
+    "rating": 4.3,
+    "reviews": 179,
+    "stock": 37
   },
   {
     "id": "p082",
@@ -820,7 +1302,13 @@
     "subCategory": "Furniture",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Wall Shelf.jpeg",
+    "price": 515,
+    "seller": "EcoStream",
+    "rating": 3.8,
+    "reviews": 91,
+    "stock": 21
   },
   {
     "id": "p083",
@@ -830,7 +1318,13 @@
     "subCategory": "Accessories",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Scarf.jpeg",
+    "price": 1055,
+    "seller": "GreenHive",
+    "rating": 4.4,
+    "reviews": 192,
+    "stock": 41
   },
   {
     "id": "p084",
@@ -840,7 +1334,13 @@
     "subCategory": "Bath",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Bamboo Soap Dish.jpeg",
+    "price": 785,
+    "seller": "EarthEco",
+    "rating": 4.0,
+    "reviews": 128,
+    "stock": 29
   },
   {
     "id": "p085",
@@ -850,7 +1350,13 @@
     "subCategory": "Dried Fruits",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Raisins (Paper Bag).jpg",
+    "price": 350,
+    "seller": "EcoBliss",
+    "rating": 3.5,
+    "reviews": 74,
+    "stock": 18
   },
   {
     "id": "p086",
@@ -860,7 +1366,13 @@
     "subCategory": "Bags",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Jute Shopping Bag.jpeg",
+    "price": 1225,
+    "seller": "BioCart",
+    "rating": 4.8,
+    "reviews": 247,
+    "stock": 46
   },
   {
     "id": "p087",
@@ -870,7 +1382,13 @@
     "subCategory": "Organic",
     "region": "India",
     "packaging": "Paper Pouch",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cumin Seeds.jpeg",
+    "price": 625,
+    "seller": "GreenCart",
+    "rating": 4.1,
+    "reviews": 135,
+    "stock": 30
   },
   {
     "id": "p088",
@@ -880,7 +1398,13 @@
     "subCategory": "Gifting",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Keychain.jpeg",
+    "price": 870,
+    "seller": "EcoThrive",
+    "rating": 3.9,
+    "reviews": 119,
+    "stock": 32
   },
   {
     "id": "p089",
@@ -890,7 +1414,13 @@
     "subCategory": "Tableware",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Table Runner.jpeg",
+    "price": 695,
+    "seller": "PureBloom",
+    "rating": 4.3,
+    "reviews": 126,
+    "stock": 33
   },
   {
     "id": "p090",
@@ -900,7 +1430,13 @@
     "subCategory": "Drinkware",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Clay Water Pot.jpeg",
+    "price": 1320,
+    "seller": "EcoRise",
+    "rating": 4.6,
+    "reviews": 262,
+    "stock": 52
   },
   {
     "id": "p091",
@@ -910,7 +1446,13 @@
     "subCategory": "Pulses",
     "region": "India",
     "packaging": "Jute",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Lentils.jpeg",
+    "price": 480,
+    "seller": "GreenHive",
+    "rating": 3.6,
+    "reviews": 90,
+    "stock": 20
   },
   {
     "id": "p092",
@@ -920,7 +1462,13 @@
     "subCategory": "Office",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Pen Holder.jpeg",
+    "price": 690,
+    "seller": "EarthSense",
+    "rating": 4.0,
+    "reviews": 139,
+    "stock": 34
   },
   {
     "id": "p093",
@@ -930,7 +1478,13 @@
     "subCategory": "Tableware",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Napkins (Set of 4).jpeg",
+    "price": 1175,
+    "seller": "GreenThrive",
+    "rating": 4.5,
+    "reviews": 218,
+    "stock": 53
   },
   {
     "id": "p094",
@@ -940,7 +1494,13 @@
     "subCategory": "Fragrance",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Reed Diffuser.jpeg",
+    "price": 850,
+    "seller": "SustainMart",
+    "rating": 4.2,
+    "reviews": 163,
+    "stock": 39
   },
   {
     "id": "p095",
@@ -950,7 +1510,13 @@
     "subCategory": "Nuts",
     "region": "India",
     "packaging": "Glass",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Walnuts (Glass Jar).jpeg",
+    "price": 990,
+    "seller": "EcoCrate",
+    "rating": 4.3,
+    "reviews": 189,
+    "stock": 48
   },
   {
     "id": "p096",
@@ -960,7 +1526,13 @@
     "subCategory": "Decor",
     "region": "India",
     "packaging": "Cardboard",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Bamboo Photo Frame.jpeg",
+    "price": 660,
+    "seller": "NatureWise",
+    "rating": 3.7,
+    "reviews": 109,
+    "stock": 27
   },
   {
     "id": "p097",
@@ -970,7 +1542,13 @@
     "subCategory": "Activewear",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Cotton Yoga Pants.jpeg",
+    "price": 1395,
+    "seller": "GreenCart",
+    "rating": 4.9,
+    "reviews": 281,
+    "stock": 36
   },
   {
     "id": "p098",
@@ -980,7 +1558,13 @@
     "subCategory": "Hair",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Natural Bamboo Comb.jpeg",
+    "price": 585,
+    "seller": "EcoStream",
+    "rating": 3.6,
+    "reviews": 89,
+    "stock": 19
   },
   {
     "id": "p099",
@@ -990,7 +1574,13 @@
     "subCategory": "Dried Fruits",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Organic Dried Apricots (Paper Bag).jpeg",
+    "price": 955,
+    "seller": "EcoThrive",
+    "rating": 4.0,
+    "reviews": 173,
+    "stock": 38
   },
   {
     "id": "p100",
@@ -1000,6 +1590,12 @@
     "subCategory": "Electronics",
     "region": "India",
     "packaging": "Paper",
-    "greenAlt": null
+    "greenAlt": null,
+    "image": "/images/Jute Laptop Sleeve.jpeg",
+    "price": 1180,
+    "seller": "PureBloom",
+    "rating": 4.4,
+    "reviews": 215,
+    "stock": 45
   }
 ]

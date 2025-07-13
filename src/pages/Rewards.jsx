@@ -52,7 +52,7 @@ const Rewards = () => {
 
   return (
     <PageWrapper>
-    <div className="p-6">
+    <div className="ml-60 mt-16 p-6">
       <h1 className="text-2xl font-bold mb-4">🎁 Rewards & Karma</h1>
       <EcoTokenTracker tokens={tokens} />
 

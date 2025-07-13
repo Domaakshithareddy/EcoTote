@@ -7,7 +7,7 @@ import PageWrapper from "../components/PageWrapper";
 const Home = () => {
   return (
     <PageWrapper>
-    <div className="p-6 text-center">
+    <div className="ml-60 mt-16 p-6 text-center">
       <h1 className="text-3xl font-bold text-green-700 mb-4">🌍 Welcome to GreenCartAI</h1>
       <p className="text-gray-700 text-lg mb-6">
         Empowering sustainable shopping through AI-driven impact insights.

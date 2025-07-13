@@ -6,7 +6,7 @@ import PageWrapper from "../components/PageWrapper";
 const Recycle = () => {
   return (
     <PageWrapper>
-    <div className="p-6">
+    <div className="ml-60 mt-16 p-6">
       <h1 className="text-2xl font-bold mb-4">♻️ Closed-Loop Recycling</h1>
       <p className="text-gray-700 mb-4">
         Earn EcoTokens for returning used packaging to partnered centers.

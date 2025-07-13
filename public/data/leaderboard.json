@@ -3,18 +3,81 @@
     "rank": 1,
     "username": "ecoWarrior92",
     "city": "Bengaluru",
-    "score": 350
+    "score": 350,
+    "color": "#FFD700"
   },
   {
     "rank": 2,
     "username": "greenQueen",
     "city": "Bengaluru",
-    "score": 315
+    "score": 315,
+    "color": "#C0C0C0"
   },
   {
     "rank": 3,
     "username": "you",
     "city": "Bengaluru",
-    "score": 280
+    "score": 280,
+    "color": "#CD7F32"
+  },
+  {
+    "rank": 4,
+    "username": "ecoGuru",
+    "city": "Bengaluru",
+    "score": 250
+  },
+  {
+    "rank": 5,
+    "username": "planetSaver",
+    "city": "Bengaluru",
+    "score": 240
+  },
+  {
+    "rank": 6,
+    "username": "greenFlash",
+    "city": "Bengaluru",
+    "score": 230
+  },
+  {
+    "rank": 7,
+    "username": "carbonCutter",
+    "city": "Bengaluru",
+    "score": 220
+  },
+  {
+    "rank": 8,
+    "username": "bioBoss",
+    "city": "Bengaluru",
+    "score": 210
+  },
+  {
+    "rank": 9,
+    "username": "natureNinja",
+    "city": "Bengaluru",
+    "score": 200
+  },
+  {
+    "rank": 10,
+    "username": "ecoPhoenix",
+    "city": "Bengaluru",
+    "score": 195
+  },
+  {
+    "rank": 11,
+    "username": "cleanCaptain",
+    "city": "Bengaluru",
+    "score": 190
+  },
+  {
+    "rank": 12,
+    "username": "zeroWaster",
+    "city": "Bengaluru",
+    "score": 180
+  },
+  {
+    "rank": 13,
+    "username": "ecoExplorer",
+    "city": "Bengaluru",
+    "score": 170
   }
 ]

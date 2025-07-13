@@ -13,6 +13,7 @@ import FunFactPopup from "./components/FunFactPopup";
 import AppProvider from "./context/AppProvider";
 import AllProducts from "./pages/AllProducts";
 import ProductDetails from "./pages/ProductDetails";
+import AuthPage from "./pages/AuthPage";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             <main className="p-4 flex-1 overflow-auto">
               <Routes>
                 <Route path="/" element={<AllProducts />} />
+                <Route path="/auth" element={<AuthPage />} />
                 <Route path="/product/:productId" element={<ProductDetails />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />

@@ -19,7 +19,7 @@ const Shop = () => {
 
   return (
     <PageWrapper>
-    <div className="p-6">
+    <div className="ml-60 mt-16 p-6">
       <h1 className="text-2xl font-bold mb-4">🛍 Shop</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((p) => (

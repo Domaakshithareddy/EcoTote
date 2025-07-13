@@ -54,10 +54,10 @@ const AllProducts = () => {
 
   return (
     <PageWrapper>
-      <div className="p-6 max-w-7xl mx-auto">
+      <div className="p-6 max-w-7xl mx-auto ml-60 mt-16 ">
         <h1 className="text-3xl font-extrabold text-green-800 mb-6">🌿 Explore Products</h1>
 
-        {/* 🔍 Search & Filter */}
+        {/* Search & Filter */}
         <div className="bg-white p-4 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-4 mb-8">
           <div className="relative flex-1 w-full">
             <input
@@ -79,15 +79,24 @@ const AllProducts = () => {
             )}
           </div>
 
-          <select
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-            className="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-          >
-            {categories.map((cat, idx) => (
-              <option key={idx} value={cat}>{cat}</option>
-            ))}
-          </select>
+          <div className="relative w-full md:w-48">
+            <select
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="appearance-none w-full px-4 py-2 pr-10 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+            >
+              {categories.map((cat, idx) => (
+                <option key={idx} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
+
+            {/* Custom dropdown arrow */}
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">
+              ▼
+            </div>
+          </div>
 
           <button
             onClick={handleSearchOrFilter}

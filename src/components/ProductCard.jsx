@@ -22,21 +22,28 @@ const ProductCard = ({ product }) => {
         <Link to={`/product/${product.id}`}>
           <h3 className="text-lg font-semibold text-gray-800 mb-1">{product.name}</h3>
 
-          <ul className="text-sm text-gray-600 space-y-0.5">
+          <ul className="text-sm text-gray-700 space-y-0.5 mb-2">
             <li>
-              🌍 <span className="font-medium">Carbon:</span> {product.carbonScore} kg CO₂
+              <span className="font-medium">Price:</span> ₹{product.price}
             </li>
             <li>
-              📦 <span className="font-medium">Packaging:</span> {product.packaging}
-            </li>
-            <li>
-              📍 <span className="font-medium">Region:</span> {product.region}
+              <span className="font-medium">Seller:</span> {product.seller}
             </li>
           </ul>
+
+          {/* Rating */}
+          <div className="flex items-center text-sm text-yellow-500 mb-1">
+            {Array.from({ length: 5 }, (_, i) => (
+              <span key={i}>
+                {i < Math.round(product.rating) ? "★" : "☆"}
+              </span>
+            ))}
+            <span className="text-gray-600 ml-2">({product.reviews} reviews)</span>
+          </div>
         </Link>
 
         {/* Quantity Button */}
-        <div className="flex justify-end mt-4">
+        <div className="flex justify-end mt-2">
           <QuantityButton product={product} />
         </div>
       </div>

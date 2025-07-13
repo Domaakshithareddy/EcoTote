@@ -12,7 +12,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { label: "Dashboard", icon: <LayoutDashboard />, to: "/" },
+  { label: "View Products", icon: <LayoutDashboard />, to: "/" },
   { label: "Leaderboard", icon: <Trophy />, to: "/leaderboard" },
   { label: "Rewards", icon: <Gift />, to: "/rewards" },
   { label: "Consumer", icon: <Users />, to: "/consumer" },
@@ -25,14 +25,16 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`h-screen bg-white border-r shadow-sm transition-all duration-300 ${
+      className={`fixed top-16 left-0 h-[calc(100vh-64px)] bg-white border-r shadow-sm transition-all duration-300 ${
         collapsed ? "w-16" : "w-60"
       }`}
     >
+
+
       {/* Toggle */}
       <div className="flex items-center justify-between p-4 border-b">
         <h1 className={`font-bold text-green-600 text-lg ${collapsed && "hidden"}`}>
-          Green Basket
+          EcoTote
         </h1>
         <button onClick={() => setCollapsed(!collapsed)}>
           {collapsed ? <Menu /> : <ChevronLeft />}

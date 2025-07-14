@@ -8,6 +8,13 @@
   },
   {
     "id": "d2",
+    "name": "Save Child Labour NGO",
+    "description": "Stop child labour.",
+    "tokenCost": 50,
+    "link": "https://www.cry.org/donate-online/?utm_source=google&utm_medium=cpc&utm_campaign=61420&utm_term=donate%20to%20children%20in%20need&utm_content=donation+generic+text+ads+t1+30oct&campaign_Name=generic-donation-t1&gad_source=1&gad_campaignid=20361673605&gbraid=0AAAAADsUazcPSlRiFQr4tXCUJ4HWkpm7f&gclid=Cj0KCQjwss3DBhC3ARIsALdgYxM3oOnvRxVYgOmoKehMW_JGvU7QCsxnH3g7Xit-fGZGbv2VvAfyr5waAsPzEALw_wcB"
+  },
+  {
+    "id": "d3",
     "name": "Tree Plantation Drive",
     "description": "Support tree planting in urban communities.",
     "tokenCost": 50,

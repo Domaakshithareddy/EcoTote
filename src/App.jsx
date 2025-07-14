@@ -17,6 +17,7 @@ import AuthPage from "./pages/AuthPage";
 import PlaceOrder from "./pages/PlaceOrder";
 import ChatBot from "./components/ChatBot";
 import SupplierRegister from "./pages/SupplierRegister";
+import WhySustainability from "./pages/WhySustainability";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/place-order" element={<PlaceOrder />} />
                 <Route path="/supplier-register" element={<SupplierRegister />} />
+                <Route path="/why-sustainability" element={<WhySustainability />} />
               </Routes>
             </main>
 

@@ -6,15 +6,21 @@ import PageWrapper from "../components/PageWrapper";
 import { Gift, TicketPercent, Leaf, X } from "lucide-react";
 
 const Rewards = () => {
-  const { tokens, setTokens } = useContext(AppContext);
+  const {
+    tokens,
+    setTokens,
+    couponHistory,
+    setCouponHistory,
+    donationHistory,
+    setDonationHistory,
+  } = useContext(AppContext);
+
   const [coupons, setCoupons] = useState([]);
   const [donations, setDonations] = useState([]);
   const [tab, setTab] = useState("coupons");
   const [selectedCoupon, setSelectedCoupon] = useState(null);
   const [selectedDonation, setSelectedDonation] = useState(null);
   const [donationAmount, setDonationAmount] = useState("");
-  const [redeemedCoupons, setRedeemedCoupons] = useState([]);
-  const [donationHistory, setDonationHistory] = useState([]);
 
   useEffect(() => {
     fetchJSON("coupons.json").then(setCoupons);
@@ -25,26 +31,48 @@ const Rewards = () => {
     const selected = coupons.find((c) => c.id === id);
     if (selected && tokens >= selected.tokenCost) {
       setTokens(tokens - selected.tokenCost);
+      const formattedDate = new Date().toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      });
+
+      setCouponHistory((prev) => [
+        {
+          code: selected.code,
+          discount: selected.description,
+          usedOn: formattedDate,
+        },
+        ...prev,
+      ]);
+
       alert(`🎉 You redeemed ${selected.tokenCost} tokens for ${selected.brand}'s coupon!`);
-      setRedeemedCoupons((prev) => [...prev, selected]);
     }
   };
 
   const confirmDonation = () => {
     const amount = parseInt(donationAmount);
-    if (isNaN(amount) || amount <= 0) {
-      alert("❌ Please enter a valid donation amount.");
+    if (isNaN(amount) || amount <= 0 || amount > tokens) {
+      alert("❌ Enter a valid donation amount within your token balance.");
       return;
     }
-    if (amount > tokens) {
-      alert("❌ You don't have enough tokens.");
-      return;
-    }
+
     setTokens(tokens - amount);
+    const formattedDate = new Date().toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+
     setDonationHistory((prev) => [
+      {
+        org: selectedDonation.name,
+        amount: `${amount} tokens`,
+        date: formattedDate,
+      },
       ...prev,
-      { ...selectedDonation, donated: donationAmount, date: new Date().toISOString() },
     ]);
+
     alert(`✅ Donated ${amount} tokens to ${selectedDonation.name}`);
     setSelectedDonation(null);
     setDonationAmount("");
@@ -53,13 +81,30 @@ const Rewards = () => {
   return (
     <PageWrapper>
       <div className="ml-60 mt-16 p-6">
+        {/* Header */}
         <h1 className="text-2xl font-bold mb-4 flex items-center gap-2 text-green-800">
-          <Gift className="w-6 h-6" /> Rewards & Karma
+          <Gift className="w-6 h-6" />
+          Coupons and Donations
         </h1>
+
+        {/* EcoTokens */}
         <EcoTokenTracker tokens={tokens} />
 
+        {/* Promo Boxes */}
+        <div className="grid sm:grid-cols-2 gap-4 mt-6 mb-4">
+          <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-4 rounded-lg shadow border">
+            <p className="font-semibold text-blue-800">Make purchase above ₹999 to earn rewards</p>
+            <span className="text-sm font-bold bg-blue-200 px-2 py-1 rounded inline-block mt-1">Earn: 50 tokens</span>
+          </div>
+          <div className="bg-gradient-to-r from-blue-100 to-blue-50 p-4 rounded-lg shadow border">
+            <p className="font-semibold text-blue-800">Refer EcoTote to a friend</p>
+            <p className="text-sm text-gray-600 mt-1">Earn 20 tokens using referral code:</p>
+            <span className="text-sm font-bold bg-blue-200 px-2 py-1 rounded inline-block mt-1">NEWTOTE</span>
+          </div>
+        </div>
+
         {/* Tabs */}
-        <div className="flex gap-4 mt-6 mb-4">
+        <div className="flex gap-4 mt-4 mb-6">
           <button
             onClick={() => setTab("coupons")}
             className={`px-4 py-2 rounded flex items-center gap-2 ${
@@ -80,54 +125,93 @@ const Rewards = () => {
           </button>
         </div>
 
-        {/* Coupons */}
+        {/* Active Tab - Coupons */}
         {tab === "coupons" && (
-          <div className="grid md:grid-cols-2 gap-4">
-            {coupons.map((c) => (
-              <div key={c.id} className="bg-white p-4 shadow rounded-md border">
-                <h3 className="font-bold">{c.brand}</h3>
-                <p className="text-sm text-gray-600">{c.description}</p>
-                <button
-                  className="mt-2 px-3 py-1 bg-blue-600 text-white rounded"
-                  disabled={tokens < c.tokenCost}
-                  onClick={() => setSelectedCoupon(c)}
-                >
-                  View Details
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Donations */}
-        {tab === "donations" && (
-          <div className="grid md:grid-cols-2 gap-4">
-            {donations.map((d) => (
-              <div key={d.id} className="bg-white p-4 shadow rounded-md border">
-                <h3 className="font-bold">{d.name}</h3>
-                <p className="text-sm text-gray-600">{d.description}</p>
-                <div className="flex justify-between items-center mt-2">
+          <>
+            <div className="grid md:grid-cols-2 gap-4">
+              {coupons.map((c) => (
+                <div key={c.id} className="bg-white p-4 shadow rounded-md border">
+                  <h3 className="font-bold">{c.brand}</h3>
+                  <p className="text-sm text-gray-600">{c.description}</p>
                   <button
-                    className="px-3 py-1 bg-green-500 text-white rounded"
-                    onClick={() => {
-                      setSelectedDonation(d);
-                      setDonationAmount("");
-                    }}
+                    className="mt-2 px-3 py-1 bg-blue-600 text-white rounded"
+                    disabled={tokens < c.tokenCost}
+                    onClick={() => setSelectedCoupon(c)}
                   >
-                    Donate
+                    View Details
                   </button>
-                  <a
-                    href={d.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm underline text-blue-600 ml-2 mt-1"
-                  >
-                    Know More →
-                  </a>
+                </div>
+              ))}
+            </div>
+
+            {couponHistory.length > 0 && (
+              <div className="mt-10">
+                <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <TicketPercent className="w-5 h-5 text-green-700" />
+                  Coupon History
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {couponHistory.map((c, idx) => (
+                    <div key={idx} className="bg-gray-50 border rounded-lg p-4 shadow-sm">
+                      <p className="font-semibold text-green-700">{c.code}</p>
+                      <p className="text-sm text-gray-600">{c.discount}</p>
+                      <p className="text-xs text-gray-500 mt-1">Used on: {c.usedOn}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
+            )}
+          </>
+        )}
+
+        {/* Active Tab - Donations */}
+        {tab === "donations" && (
+          <>
+            <div className="grid md:grid-cols-2 gap-4">
+              {donations.map((d) => (
+                <div key={d.id} className="bg-white p-4 shadow rounded-md border">
+                  <h3 className="font-bold">{d.name}</h3>
+                  <p className="text-sm text-gray-600">{d.description}</p>
+                  <div className="flex justify-between items-center mt-2">
+                    <button
+                      className="px-3 py-1 bg-green-500 text-white rounded"
+                      onClick={() => {
+                        setSelectedDonation(d);
+                        setDonationAmount("");
+                      }}
+                    >
+                      Donate
+                    </button>
+                    <a
+                      href={d.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm underline text-blue-600 ml-2 mt-1"
+                    >
+                      Know More →
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {donationHistory.length > 0 && (
+              <div className="mt-10">
+                <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                  <Leaf className="w-5 h-5 text-green-700" />
+                  Donation History
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {donationHistory.map((d, idx) => (
+                    <div key={idx} className="bg-emerald-50 border rounded-lg p-4 shadow-sm">
+                      <p className="text-green-800 font-semibold">{d.amount} to {d.org}</p>
+                      <p className="text-xs text-gray-500 mt-1">Donated on: {d.date}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </>
         )}
 
         {/* Coupon Modal */}
@@ -148,12 +232,8 @@ const Rewards = () => {
                   {selectedCoupon.code}
                 </span>
               </p>
-              <p className="text-sm mt-1">
-                <strong>Expires on:</strong> {selectedCoupon.expiry}
-              </p>
-              <p className="text-sm mt-1">
-                <strong>Token Cost:</strong> {selectedCoupon.tokenCost}
-              </p>
+              <p className="text-sm mt-1"><strong>Expires on:</strong> {selectedCoupon.expiry}</p>
+              <p className="text-sm mt-1"><strong>Token Cost:</strong> {selectedCoupon.tokenCost}</p>
               <button
                 onClick={() => {
                   handleRedeem(selectedCoupon.id);
@@ -167,7 +247,7 @@ const Rewards = () => {
           </div>
         )}
 
-        {/* Donation Confirmation Modal */}
+        {/* Donation Modal */}
         {selectedDonation && (
           <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
             <div className="bg-white rounded-lg p-6 w-full max-w-md shadow-xl relative">
@@ -181,9 +261,7 @@ const Rewards = () => {
               <p className="text-sm text-gray-700 mb-2">
                 You're donating to: <strong>{selectedDonation.name}</strong>
               </p>
-              <p className="text-sm mb-2">
-                You currently have: <strong>{tokens} EcoTokens</strong>
-              </p>
+              <p className="text-sm mb-2">You currently have: <strong>{tokens} EcoTokens</strong></p>
               <input
                 type="number"
                 min="1"
@@ -208,46 +286,6 @@ const Rewards = () => {
                 </button>
               </div>
             </div>
-          </div>
-        )}
-
-        {/* Redeemed Coupons Section */}
-        {redeemedCoupons.length > 0 && (
-          <div className="mt-10">
-            <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-              <TicketPercent className="w-5 h-5 text-green-700" />
-              Redeemed Coupons
-            </h2>
-            <ul className="space-y-2 text-sm">
-              {redeemedCoupons.map((c, idx) => (
-                <li key={idx} className="bg-gray-100 p-3 rounded shadow-sm">
-                  <strong>{c.brand}</strong> – <span>{c.description}</span> –{" "}
-                  <span className="ml-1 text-green-700">{c.tokenCost} tokens</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Donation History Section */}
-        {donationHistory.length > 0 && (
-          <div className="mt-8">
-            <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-              <Leaf className="w-5 h-5 text-green-700" />
-              Donation History
-            </h2>
-            <ul className="space-y-2 text-sm">
-              {donationHistory.map((d, idx) => (
-                <li key={idx} className="bg-emerald-50 p-3 rounded shadow-sm">
-                  Donated{" "}
-                  <strong className="text-green-800">{d.donated}</strong> tokens to{" "}
-                  <strong>{d.name}</strong> on{" "}
-                  <span className="text-gray-600">
-                    {new Date(d.date).toLocaleString()}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
         )}
       </div>

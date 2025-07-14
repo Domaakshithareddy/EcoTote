@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PageWrapper from "../components/PageWrapper";
 import ProductCard from "../components/ProductCard";
 import fetchJSON from "../utils/fetchJSON";
+import { MapPin } from "lucide-react";
 
 const centerData = {
   Bangalore: [
@@ -19,25 +20,25 @@ const centerData = {
     "Begumpet - Sustainable Drop Point",
   ],
   Chennai: [
-    "Banjara Hills - Eco Collection Center",
-    "Madhapur - Plastic Recycle Zone",
-    "Gachibowli - EcoDepot",
-    "Kukatpally - RePack Return Center",
-    "Begumpet - Sustainable Drop Point",
+    "Adyar - Eco Collection Center",
+    "T Nagar - Plastic Recycle Zone",
+    "Guindy - EcoDepot",
+    "Velachery - RePack Return Center",
+    "Anna Nagar - Sustainable Drop Point",
   ],
   Mumbai: [
-    "Banjara Hills - Eco Collection Center",
-    "Madhapur - Plastic Recycle Zone",
-    "Gachibowli - EcoDepot",
-    "Kukatpally - RePack Return Center",
-    "Begumpet - Sustainable Drop Point",
+    "Andheri - Eco Collection Center",
+    "Bandra - Plastic Recycle Zone",
+    "Powai - EcoDepot",
+    "Dadar - RePack Return Center",
+    "Colaba - Sustainable Drop Point",
   ],
   Delhi: [
-    "Banjara Hills - Eco Collection Center",
-    "Madhapur - Plastic Recycle Zone",
-    "Gachibowli - EcoDepot",
-    "Kukatpally - RePack Return Center",
-    "Begumpet - Sustainable Drop Point",
+    "Connaught Place - Eco Collection Center",
+    "Saket - Plastic Recycle Zone",
+    "Dwarka - EcoDepot",
+    "Karol Bagh - RePack Return Center",
+    "Lajpat Nagar - Sustainable Drop Point",
   ],
 };
 
@@ -89,12 +90,9 @@ const Recycle = () => {
             Nearby Recycling Centers
           </h2>
 
-          {/* Horizontal label + dropdown */}
+          {/* Dropdown */}
           <div className="mb-4 flex items-center gap-3">
-            <label className="text-sm font-medium text-gray-700">
-              Select City:
-            </label>
-
+            <label className="text-sm font-medium text-gray-700">Select City:</label>
             <div className="relative w-48">
               <select
                 value={selectedCity}
@@ -107,8 +105,7 @@ const Recycle = () => {
                 <option value="Mumbai">Mumbai</option>
                 <option value="Delhi">Delhi</option>
               </select>
-
-              {/* Custom Arrow */}
+              {/* Custom arrow */}
               <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-500">
                 <svg
                   className="w-4 h-4"
@@ -123,12 +120,18 @@ const Recycle = () => {
             </div>
           </div>
 
-          {/* Centers List */}
-          <ul className="list-disc ml-6 text-sm text-gray-800">
-            {centerData[selectedCity].map((center, index) => (
-              <li key={index}>{center}</li>
-            ))}
-          </ul>
+          {/* Styled Card for Center List */}
+          <div className="bg-green-50 border border-green-200 rounded-lg p-5 shadow max-w-xl">
+            <h3 className="text-md font-semibold text-green-800 mb-3 flex items-center gap-2">
+              <MapPin className="w-5 h-5 text-green-700" />
+              Recycling Centers in {selectedCity}
+            </h3>
+            <ul className="list-disc ml-6 space-y-2 text-sm text-gray-800">
+              {centerData[selectedCity].map((center, index) => (
+                <li key={index}>{center}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </PageWrapper>

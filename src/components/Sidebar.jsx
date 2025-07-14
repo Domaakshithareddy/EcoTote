@@ -9,6 +9,7 @@ import {
   Menu,
   ChevronLeft,
   Users,
+  Recycle
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -19,6 +20,7 @@ const navItems = [
   { label: "Profile", icon: <User />, to: "/consumer" },
   { label: "Recycle", icon: <Repeat />, to: "/recycle" },
   { label: "Become a Supplier", icon: <Users />, to: "/supplier-register" },
+  { label: "Why Sustanability", icon: <Recycle />, to: "/why-sustainability" },
 ];
 
 const Sidebar = () => {

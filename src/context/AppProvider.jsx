@@ -6,6 +6,16 @@ const AppProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [tokens, setTokens] = useState(100);
 
+  const [couponHistory, setCouponHistory] = useState([
+    { code: "ECO20", discount: "20%", usedOn: "05 July 2025" },
+    { code: "GREEN15", discount: "15%", usedOn: "20 June 2025" },
+  ]);
+
+  const [donationHistory, setDonationHistory] = useState([
+    { org: "Plastic Free India", amount: "₹200", date: "02 July 2025" },
+    { org: "Tree Plantation Drive", amount: "₹150", date: "12 June 2025" },
+  ]);
+
   const [purchaseOrders, setPurchaseOrders] = useState([
     {
       date: "12 July 2025",
@@ -45,6 +55,10 @@ const AppProvider = ({ children }) => {
         setTokens,
         purchaseOrders,
         setPurchaseOrders,
+        couponHistory,
+        setCouponHistory,
+        donationHistory,
+        setDonationHistory,
       }}
     >
       {children}

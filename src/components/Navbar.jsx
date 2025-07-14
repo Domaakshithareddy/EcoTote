@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, LayoutDashboard, User } from "lucide-react";
+import {
+  ShoppingCart,
+  LayoutDashboard,
+  User,
+} from "lucide-react";
 import logo from "../assets/logo.png";
+import { AppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const location = useLocation();
-
-  // Mock login state (replace with real auth later)
+  const { cart } = useContext(AppContext);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const navLinks = [
@@ -33,12 +37,21 @@ const Navbar = () => {
           <Link
             key={link.name}
             to={link.path}
-            className={`flex items-center gap-2 text-sm font-medium transition-all px-2 py-1 rounded-md
-              ${location.pathname === link.path ? "bg-green-600" : "hover:bg-green-600"}
-            `}
+            className={`flex items-center gap-2 text-sm font-medium transition-all px-2 py-1 rounded-md ${
+              location.pathname === link.path
+                ? "bg-green-600"
+                : "hover:bg-green-600"
+            }`}
           >
             {link.icon}
-            {link.name}
+            <span>{link.name}</span>
+
+            {/* Cart count beside "Cart" */}
+            {link.name === "Cart" && cart.reduce((sum, item) => sum + item.quantity, 0) > 0 && (
+              <span className="ml-1 bg-white text-green-700 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">
+                {cart.reduce((sum, item) => sum + item.quantity, 0)}
+              </span>
+            )}
           </Link>
         ))}
 
@@ -49,7 +62,7 @@ const Navbar = () => {
             onClick={() => setIsLoggedIn(false)} // Logout action
           >
             <User size={18} />
-            Profile
+            Logout
           </button>
         ) : (
           <Link

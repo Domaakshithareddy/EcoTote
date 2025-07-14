@@ -11,18 +11,8 @@ import { AppContext } from "../context/AppContext";
 import badgeImg from "../assets/badge.jpeg";
 
 const Consumer = () => {
-  const { purchaseOrders } = useContext(AppContext);
+  const { purchaseOrders,couponHistory,donationHistory, } = useContext(AppContext);
   const [activeTab, setActiveTab] = useState("purchase");
-
-  const couponHistory = [
-    { code: "ECO20", discount: "20%", usedOn: "05 July 2025" },
-    { code: "GREEN15", discount: "15%", usedOn: "20 June 2025" },
-  ];
-
-  const donationHistory = [
-    { org: "Plastic Free India", amount: "₹200", date: "02 July 2025" },
-    { org: "Tree Plantation Drive", amount: "₹150", date: "12 June 2025" },
-  ];
 
   return (
     <PageWrapper>
@@ -70,7 +60,7 @@ const Consumer = () => {
               className="w-24 h-24 object-contain"
             />
             <p className="text-green-700 font-bold mt-2 text-sm">
-              🌿 Green Supporter
+              Green Supporter
             </p>
           </div>
         </div>
@@ -128,7 +118,7 @@ const Consumer = () => {
               couponHistory.map((coupon, index) => (
                 <div key={index} className="bg-white border rounded-lg p-4 mb-4 shadow">
                   <p className="text-sm">
-                    🎟️ <strong>{coupon.code}</strong> — {coupon.discount} used on{" "}
+                    <strong>{coupon.code}</strong> — {coupon.discount} used on{" "}
                     <span className="text-gray-600">{coupon.usedOn}</span>
                   </p>
                 </div>
@@ -138,7 +128,7 @@ const Consumer = () => {
               donationHistory.map((donation, index) => (
                 <div key={index} className="bg-white border rounded-lg p-4 mb-4 shadow">
                   <p className="text-sm">
-                    💝 Donated <strong>{donation.amount}</strong> to{" "}
+                    Donated <strong>{donation.amount}</strong> to{" "}
                     <span className="text-green-800 font-medium">{donation.org}</span> on{" "}
                     <span className="text-gray-600">{donation.date}</span>
                   </p>

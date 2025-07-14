@@ -5,11 +5,11 @@ import ProductCard from "../components/ProductCard";
 import PageWrapper from "../components/PageWrapper";
 
 const AllProducts = () => {
-  const { setCart } = useContext(AppContext);
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+  const { setCart, sidebarCollapsed } = useContext(AppContext);
 
   useEffect(() => {
     fetchJSON("products.json").then((data) => {
@@ -54,7 +54,7 @@ const AllProducts = () => {
 
   return (
     <PageWrapper>
-      <div className="p-6 max-w-7xl mx-auto ml-60 mt-16 ">
+      <div className={`p-6 max-w-7xl mx-auto ${sidebarCollapsed ? "ml-16" : "ml-60"} mt-16`}>
         <h1 className="text-3xl font-extrabold text-green-800 mb-6">Explore Products</h1>
 
         {/* Search & Filter */}

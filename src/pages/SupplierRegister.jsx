@@ -39,7 +39,7 @@ const SupplierRegister = () => {
             Join as an Eco-Friendly Supplier
           </h1>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-            At Walmart, we're committed to sustainability and supporting ethical suppliers.
+            At EcoTote, we're committed to sustainability and supporting ethical suppliers.
             By joining our eco supplier network, you contribute to a cleaner planet, reach
             conscious consumers, and grow your brand the right way. Let's build a greener future, together.
           </p>
@@ -117,7 +117,7 @@ const SupplierRegister = () => {
             {/* Why partner */}
             <div>
               <label className="block text-sm font-medium text-gray-700">
-                Why do you want to partner with Walmart?
+                Why do you want to partner with EcoTote?
               </label>
               <textarea
                 name="reason"

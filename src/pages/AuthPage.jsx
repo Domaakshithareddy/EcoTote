@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext"; // ✅
 
 const MOCK_USER = {
-  email: "sparkathon@gmail.com",
-  password: "sparkathon",
+  email: "spark@gmail.com",
+  password: "spark2025",
 };
 
 const AuthPage = () => {
+  const { sidebarCollapsed } = useContext(AppContext); // ✅
   const [isLogin, setIsLogin] = useState(true);
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
@@ -24,7 +26,7 @@ const AuthPage = () => {
 
         setTimeout(() => {
           setShowPopup(false);
-          navigate("/"); // Redirect to AllProducts page
+          navigate("/");
         }, 2000);
       } else {
         setMessage("Invalid credentials.");
@@ -35,17 +37,16 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 px-4 ml-60 mt-16 p-6">
+    <div
+      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 px-4 mt-16 p-6 transition-all duration-300 ${
+        sidebarCollapsed ? "ml-16" : "ml-60"
+      }`}
+    >
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8 relative">
 
         {/* Popup Modal */}
         {showPopup && (
           <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-800 rounded-lg shadow-md relative animate-fade-in">
-            <button
-              onClick={() => setShowPopup(false)}
-              className="absolute top-1 right-2 text-sm font-bold text-green-700 hover:text-green-900"
-            >
-            </button>
             <p className="text-center font-semibold">👋 Welcome back, User!</p>
           </div>
         )}
@@ -107,7 +108,6 @@ const AuthPage = () => {
         </div>
       </div>
 
-      {/* Tailwind animation keyframes (if not already present) */}
       <style>{`
         @keyframes fade-in {
           0% { opacity: 0; transform: scale(0.95); }

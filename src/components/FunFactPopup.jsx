@@ -33,7 +33,7 @@ const FunFactPopup = () => {
         setFactIndex((prev) => (prev + 1) % facts.length);
         setVisible(true); // Slide in new
       }, 600); // Delay matches animation duration
-    }, 30000); // Change every 30 seconds
+    }, 6000); // Change every 30 seconds
 
     return () => clearInterval(interval);
   }, [facts]);

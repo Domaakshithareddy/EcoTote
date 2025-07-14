@@ -43,7 +43,7 @@ setTimeout(() => {
       <div className="min-h-screen ml-60 mt-16 p-6 grid grid-cols-1 md:grid-cols-[2fr_1px_2fr] gap-6 max-w-6xl mx-auto">
         {/* Left - Cart Summary */}
         <div>
-          <h2 className="text-xl font-bold text-green-800 mb-4">🛒 Final Items</h2>
+          <h2 className="text-xl font-bold text-green-800 mb-4">Final Items</h2>
           {cart.length === 0 ? (
             <p className="text-gray-600">No items in cart.</p>
           ) : (
@@ -72,20 +72,20 @@ setTimeout(() => {
 
         {/* Right - Delivery Options */}
         <div>
-          <h2 className="text-xl font-bold text-green-800 mb-4">🚚 Choose Delivery</h2>
+          <h2 className="text-xl font-bold text-green-800 mb-4">Choose Delivery Option</h2>
           <div className="space-y-4">
   {[
     {
       type: "fast",
       label: "Fast Delivery (1–2 Days)",
-      desc: "🚨 Higher carbon emissions",
-      textColor: "text-gray-600",
+      desc: "Higher carbon emissions",
+      textColor: "text-red-500",
     },
     {
       type: "slow",
       label: "Slow Delivery (3–4 Days)",
-      desc: "🌱 Lower carbon footprint",
-      textColor: "text-green-600",
+      desc: "Lower carbon footprint",
+      textColor: "text-green-700",
     },
   ].map((option) => (
     <div
@@ -110,7 +110,7 @@ setTimeout(() => {
             disabled={!selectedDelivery}
             className="mt-6 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 disabled:opacity-50 w-full"
           >
-            ✅ Place Order
+            Place Order
           </button>
         </div>
       </div>

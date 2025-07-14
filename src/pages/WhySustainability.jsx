@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useContext} from "react";
 import PageWrapper from "../components/PageWrapper";
 import {
   Leaf,
@@ -8,11 +8,16 @@ import {
   TreePine,
 } from "lucide-react";
 import sustainImg from "../assets/sustanability.jpg"; // ensure correct path
+import { AppContext } from "../context/AppContext";
 
 const WhySustainability = () => {
+  const { sidebarCollapsed } = useContext(AppContext);
+
   return (
     <PageWrapper>
-      <div className="ml-60 mt-16 px-8 py-10 max-w-6xl text-gray-800 space-y-12">
+      <div className={`mt-16 px-8 py-10 max-w-6xl text-gray-800 space-y-12 transition-all duration-300 ${
+    sidebarCollapsed ? "ml-16" : "ml-60"
+  }`}>
         {/* Title */}
         <div className="text-center space-y-2">
           <h1 className="text-4xl font-extrabold text-green-800 flex items-center justify-center gap-2">

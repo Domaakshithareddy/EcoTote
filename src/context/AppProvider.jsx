@@ -5,6 +5,7 @@ import { AppContext } from "./AppContext";
 const AppProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [tokens, setTokens] = useState(100);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const [couponHistory, setCouponHistory] = useState([
     { code: "ECO20", discount: "20%", usedOn: "05 July 2025" },
@@ -59,6 +60,8 @@ const AppProvider = ({ children }) => {
         setCouponHistory,
         donationHistory,
         setDonationHistory,
+        sidebarCollapsed, 
+        setSidebarCollapsed,
       }}
     >
       {children}

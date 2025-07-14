@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 const Cart = () => {
-  const { cart, setCart } = useContext(AppContext);
+  const { cart, setCart, sidebarCollapsed } = useContext(AppContext);
   const [products, setProducts] = useState([]);
   const [alternatives, setAlternatives] = useState({});
   const [totalCarbon, setTotalCarbon] = useState(0);
@@ -72,7 +72,7 @@ const Cart = () => {
 
   return (
     <PageWrapper>
-      <div className="p-6 max-w-5xl ml-60 mt-16 space-y-6">
+      <div className={`p-6 max-w-5xl mt-16 space-y-6 transition-all duration-300 ${ sidebarCollapsed ? "ml-16" : "ml-60" }`}>
         {/* Title & Swap All */}
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-extrabold text-green-800 flex items-center gap-2">

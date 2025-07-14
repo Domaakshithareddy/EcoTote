@@ -8,6 +8,9 @@ export default {
       transitionProperty: {
         transform: "transform",
       },
+      fontFamily: {
+        quicksand: ['"Quicksand"', 'sans-serif'],
+      },
     },
   },
   plugins: [],

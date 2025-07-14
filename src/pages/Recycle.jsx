@@ -68,7 +68,7 @@ const Recycle = () => {
             Join Our Recycling Initiative
           </h1>
           <p className="text-gray-800 text-sm">
-            At Walmart, we're committed to a greener tomorrow. By returning used eco-products like packaging, bottles, and electronics to nearby recycling centers, you help reduce landfill waste and carbon emissions. Every item you return contributes to a more sustainable community—and earns you EcoTokens as a thank you. Let’s close the loop and build a cleaner future together!
+            At EcoTote, we're committed to a greener tomorrow. By returning used eco-products like packaging, bottles, and electronics to nearby recycling centers, you help reduce landfill waste and carbon emissions. Every item you return contributes to a more sustainable community—and earns you EcoTokens as a thank you. Let’s close the loop and build a cleaner future together!
           </p>
         </div>
 

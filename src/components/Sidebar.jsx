@@ -1,5 +1,4 @@
-// components/Sidebar.jsx
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import {
   LayoutDashboard,
   Trophy,
@@ -9,9 +8,10 @@ import {
   Menu,
   ChevronLeft,
   Users,
-  Recycle
+  Recycle,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 const navItems = [
   { label: "View Products", icon: <LayoutDashboard />, to: "/" },
@@ -20,32 +20,32 @@ const navItems = [
   { label: "Profile", icon: <User />, to: "/consumer" },
   { label: "Recycle", icon: <Repeat />, to: "/recycle" },
   { label: "Become a Supplier", icon: <Users />, to: "/supplier-register" },
-  { label: "Why Sustanability", icon: <Recycle />, to: "/why-sustainability" },
+  { label: "Why Sustainability", icon: <Recycle />, to: "/why-sustainability" },
 ];
 
 const Sidebar = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const { sidebarCollapsed, setSidebarCollapsed } = useContext(AppContext);
   const location = useLocation();
 
   return (
     <div
       className={`fixed top-16 left-0 h-[calc(100vh-64px)] bg-white border-r shadow-sm transition-all duration-300 ${
-        collapsed ? "w-16" : "w-60"
+        sidebarCollapsed ? "w-16" : "w-60"
       }`}
     >
-
-
-      {/* Toggle */}
       <div className="flex items-center justify-between p-4 border-b">
-        <h1 className={`font-bold text-green-600 text-lg ${collapsed && "hidden"}`}>
+        <h1
+          className={`font-bold text-green-600 text-lg font-quicksand ${
+            sidebarCollapsed && "hidden"
+          }`}
+        >
           EcoTote
         </h1>
-        <button onClick={() => setCollapsed(!collapsed)}>
-          {collapsed ? <Menu /> : <ChevronLeft />}
+        <button onClick={() => setSidebarCollapsed(!sidebarCollapsed)}>
+          {sidebarCollapsed ? <Menu /> : <ChevronLeft />}
         </button>
       </div>
 
-      {/* Links */}
       <nav className="mt-4 flex flex-col space-y-2">
         {navItems.map((item, idx) => (
           <Link
@@ -58,7 +58,7 @@ const Sidebar = () => {
             }`}
           >
             <span className="w-5">{item.icon}</span>
-            {!collapsed && <span>{item.label}</span>}
+            {!sidebarCollapsed && <span>{item.label}</span>}
           </Link>
         ))}
       </nav>

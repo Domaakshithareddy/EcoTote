@@ -6,7 +6,6 @@ import Leaderboard from "./pages/Leaderboard";
 import Rewards from "./pages/Rewards";
 import Consumer from "./pages/Consumer";
 import Recycle from "./pages/Recycle";
-import Shop from "./pages/Shop";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar"; // 👈 Add this
 import FunFactPopup from "./components/FunFactPopup";
@@ -43,7 +42,6 @@ const App = () => {
                 <Route path="/rewards" element={<Rewards />} />
                 <Route path="/consumer" element={<Consumer />} />
                 <Route path="/recycle" element={<Recycle />} />
-                <Route path="/shop" element={<Shop />} />
                 <Route path="/place-order" element={<PlaceOrder />} />
                 <Route path="/supplier-register" element={<SupplierRegister />} />
                 <Route path="/why-sustainability" element={<WhySustainability />} />

@@ -1,9 +1,0 @@
-{
-  "origin": "Hyderabad",
-  "destination": "Bengaluru",
-  "recommendedTransport": "EV Freight",
-  "optimizedRouteDistance": "570 km",
-  "carbonSaved": 5.8,
-  "carbonUnit": "kg",
-  "route": ["Hyderabad", "Kurnool", "Anantapur", "Bengaluru"]
-}

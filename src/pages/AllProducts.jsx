@@ -3,13 +3,14 @@ import { AppContext } from "../context/AppContext";
 import fetchJSON from "../utils/fetchJSON";
 import ProductCard from "../components/ProductCard";
 import PageWrapper from "../components/PageWrapper";
+import Layout from "../components/Layout";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
-  const { setCart, sidebarCollapsed } = useContext(AppContext);
+  const { setCart } = useContext(AppContext);
 
   useEffect(() => {
     fetchJSON("products.json").then((data) => {
@@ -53,12 +54,15 @@ const AllProducts = () => {
   };
 
   return (
-    <PageWrapper>
-      <div className={`p-6 max-w-7xl mx-auto ${sidebarCollapsed ? "ml-16" : "ml-60"} mt-16`}>
-        <h1 className="text-3xl font-extrabold text-green-800 mb-6">Explore Products</h1>
+    <Layout>
+      <PageWrapper>
+        <h1 className="text-3xl font-extrabold text-green-800 mb-6">
+          Explore Products
+        </h1>
 
-        {/* Search & Filter */}
+        {/* 🔍 Search & Filter */}
         <div className="bg-white p-4 rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-4 mb-8">
+          {/* Search Box */}
           <div className="relative flex-1 w-full">
             <input
               type="text"
@@ -68,7 +72,7 @@ const AllProducts = () => {
               onKeyDown={handleKeyPress}
               className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-  
+
             {search && (
               <button
                 onClick={() => setSearch("")}
@@ -79,6 +83,7 @@ const AllProducts = () => {
             )}
           </div>
 
+          {/* Category Dropdown */}
           <div className="relative w-full md:w-48">
             <select
               value={category}
@@ -108,16 +113,22 @@ const AllProducts = () => {
 
         {/* 🛍 Products Grid */}
         {filtered.length === 0 ? (
-          <p className="text-center text-gray-500 text-sm">No products found for your search.</p>
+          <p className="text-center text-gray-500 text-sm">
+            No products found for your search.
+          </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} onAdd={handleAddToCart} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                onAdd={handleAddToCart}
+              />
             ))}
           </div>
         )}
-      </div>
-    </PageWrapper>
+      </PageWrapper>
+    </Layout>
   );
 };
 

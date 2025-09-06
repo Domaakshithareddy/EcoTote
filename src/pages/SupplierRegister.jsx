@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PageWrapper from "../components/PageWrapper";
+import { AppContext } from "../context/AppContext";
 
 const SupplierRegister = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ const SupplierRegister = () => {
     products: "",
     reason: "",
   });
+  const { sidebarCollapsed } = useContext(AppContext);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,7 +34,12 @@ const SupplierRegister = () => {
 
   return (
     <PageWrapper>
-      <div className="ml-60 mt-16 p-8 min-h-screen bg-green-50">
+      <div 
+        className="pt-16 p-8 min-h-screen bg-green-50 transition-all duration-300"
+        style={{
+          marginLeft: sidebarCollapsed ? '4rem' : '15rem'
+        }}
+      >
         {/* Intro Section */}
         <div className="max-w-4xl mx-auto mb-10 text-center">
           <h1 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-4">

@@ -13,6 +13,7 @@ const Rewards = () => {
     setCouponHistory,
     donationHistory,
     setDonationHistory,
+    sidebarCollapsed,
   } = useContext(AppContext);
 
   const [coupons, setCoupons] = useState([]);
@@ -80,7 +81,12 @@ const Rewards = () => {
 
   return (
     <PageWrapper>
-      <div className="ml-60 mt-16 p-6">
+      <div 
+        className="pt-16 p-6 transition-all duration-300"
+        style={{
+          marginLeft: sidebarCollapsed ? '4rem' : '15rem'
+        }}
+      >
         {/* Header */}
         <h1 className="text-2xl font-bold mb-4 flex items-center gap-2 text-green-800">
           <Gift className="w-6 h-6" />

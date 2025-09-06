@@ -11,19 +11,24 @@ import { AppContext } from "../context/AppContext";
 import badgeImg from "../assets/badge.jpeg";
 
 const Consumer = () => {
-  const { purchaseOrders,couponHistory,donationHistory, } = useContext(AppContext);
+  const { purchaseOrders, couponHistory, donationHistory, sidebarCollapsed } = useContext(AppContext);
   const [activeTab, setActiveTab] = useState("purchase");
 
   return (
     <PageWrapper>
-      <div className="min-h-screen bg-gradient-to-br from-green-50 to-white ml-60 mt-16 p-6">
+      <div 
+        className={`min-h-screen bg-gradient-to-br from-green-50 to-white pt-16 p-6 transition-all duration-300`}
+        style={{
+          marginLeft: sidebarCollapsed ? '4rem' : '15rem'
+        }}
+      >
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-extrabold text-green-800 flex items-center gap-2 drop-shadow">
+        <div className="mb-8 max-w-5xl mx-auto">
+          <h1 className="text-3xl font-extrabold text-green-800 flex items-center justify-center gap-2 drop-shadow">
             <Sparkles className="text-green-500" />
             Consumer Sustainability Dashboard
           </h1>
-          <p className="text-gray-600 mt-1 text-sm">
+          <p className="text-gray-600 mt-1 text-sm text-center">
             Track your eco impact and achievements.
           </p>
         </div>

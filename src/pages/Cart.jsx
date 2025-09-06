@@ -5,6 +5,7 @@ import ReverseWasteSim from "../components/ReverseWasteSim";
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper";
+import Layout from "../components/Layout";
 import {
   ShoppingCart,
   Package,
@@ -14,7 +15,7 @@ import {
 } from "lucide-react";
 
 const Cart = () => {
-  const { cart, setCart, sidebarCollapsed } = useContext(AppContext);
+  const { cart, setCart } = useContext(AppContext);
   const [products, setProducts] = useState([]);
   const [alternatives, setAlternatives] = useState({});
   const [totalCarbon, setTotalCarbon] = useState(0);
@@ -71,129 +72,131 @@ const Cart = () => {
   };
 
   return (
-    <PageWrapper>
-      <div className={`p-6 max-w-5xl mt-16 space-y-6 transition-all duration-300 ${ sidebarCollapsed ? "ml-16" : "ml-60" }`}>
-        {/* Title & Swap All */}
-        <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-extrabold text-green-800 flex items-center gap-2">
-            <ShoppingCart className="text-green-700" size={28} />
-            Your Cart's Eco Impact
-          </h1>
-        </div>
-
-        {/* Avatar + Waste */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white rounded-xl border shadow p-4">
-            <EcoTreeAvatar totalCarbon={totalCarbon} />
+    <Layout>
+      <PageWrapper>
+        <div className="p-6 max-w-5xl space-y-6">
+          {/* Title & Swap All */}
+          <div className="flex justify-between items-center">
+            <h1 className="text-3xl font-extrabold text-green-800 flex items-center gap-2">
+              <ShoppingCart className="text-green-700" size={28} />
+              Your Cart's Eco Impact
+            </h1>
           </div>
-          <ReverseWasteSim wasteKg={totalCarbon * 0.015} />
-        </div>
 
-        {/* Cart Items */}
-        <div className="bg-white rounded-xl border shadow p-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-            <Package className="text-green-700" size={22} />
-            Products in Your Cart
-          </h2>
-          {cart.length === 0 ? (
-            <p className="text-sm text-gray-600">Your cart is empty.</p>
-          ) : (
-            <ul className="space-y-3">
-              {cart.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={`/product/${item.id}`}
-                    className="block p-4 border rounded-xl hover:shadow transition-all"
+          {/* Avatar + Waste */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white rounded-xl border shadow p-4">
+              <EcoTreeAvatar totalCarbon={totalCarbon} />
+            </div>
+            <ReverseWasteSim wasteKg={totalCarbon * 0.015} />
+          </div>
+
+          {/* Cart Items */}
+          <div className="bg-white rounded-xl border shadow p-4">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+              <Package className="text-green-700" size={22} />
+              Products in Your Cart
+            </h2>
+            {cart.length === 0 ? (
+              <p className="text-sm text-gray-600">Your cart is empty.</p>
+            ) : (
+              <ul className="space-y-3">
+                {cart.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      to={`/product/${item.id}`}
+                      className="block p-4 border rounded-xl hover:shadow transition-all"
+                    >
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <h3 className="font-semibold text-gray-800">
+                            {item.name}
+                          </h3>
+                          <p className="text-sm text-gray-500">
+                            Carbon: {item.carbonScore} g CO₂ × {item.quantity}
+                          </p>
+                        </div>
+                        <div className="text-sm font-semibold text-green-700">
+                          {item.carbonScore * item.quantity} g CO₂
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Eco-Friendly Swaps */}
+          {cart.some((item) => alternatives[item.name]) && (
+            <div className="border-2 border-green-400 bg-green-50 rounded-xl p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold text-green-800 flex items-center gap-2">
+                  <Recycle className="text-green-700" size={20} />
+                  Eco-Friendly Swaps Available
+                </h2>
+                {cart.length > 0 && (
+                  <button
+                    onClick={handleSwapAll}
+                    className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 flex items-center gap-2"
                   >
-                    <div className="flex justify-between items-center">
+                    <Globe size={18} />
+                    Swap All
+                  </button>
+                )}
+              </div>
+
+              <ul className="space-y-3">
+                {cart.map((item, index) => {
+                  const altList = alternatives[item.name];
+                  if (!altList || altList.length === 0) return null;
+
+                  const altName = altList[0];
+                  const altItem = getProductByName(altName);
+
+                  if (!altItem || swappedItems.includes(item.name)) return null;
+
+                  return (
+                    <li
+                      key={index}
+                      className="bg-white p-4 rounded-xl shadow-sm border flex justify-between items-center"
+                    >
                       <div>
                         <h3 className="font-semibold text-gray-800">
-                          {item.name}
+                          {altItem.name}
                         </h3>
-                        <p className="text-sm text-gray-500">
-                          Carbon: {item.carbonScore} g CO₂ × {item.quantity}
+                        <p className="text-sm text-gray-600">
+                          Carbon: {altItem.carbonScore} g CO₂ × {item.quantity}
                         </p>
                       </div>
-                      <div className="text-sm font-semibold text-green-700">
-                        {item.carbonScore * item.quantity} g CO₂
-                      </div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                      <button
+                        onClick={() => handleSwapItem(item)}
+                        className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-1.5 rounded-md"
+                      >
+                        Swap Item
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
+          {/* Place Order */}
+          {cart.length > 0 && (
+            <div className="flex justify-center">
+              <Link
+                to="/place-order"
+                className="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg shadow flex items-center gap-2"
+              >
+                <CheckCircle size={20} />
+                Place Order
+              </Link>
+            </div>
           )}
         </div>
-
-        {/* Eco-Friendly Swaps */}
-        {cart.some((item) => alternatives[item.name]) && (
-          <div className="border-2 border-green-400 bg-green-50 rounded-xl p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold text-green-800 flex items-center gap-2">
-                <Recycle className="text-green-700" size={20} />
-                Eco-Friendly Swaps Available
-              </h2>
-              {cart.length > 0 && (
-                <button
-                  onClick={handleSwapAll}
-                  className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 flex items-center gap-2"
-                >
-                  <Globe size={18} />
-                  Swap All
-                </button>
-              )}
-            </div>
-
-            <ul className="space-y-3">
-              {cart.map((item, index) => {
-                const altList = alternatives[item.name];
-                if (!altList || altList.length === 0) return null;
-
-                const altName = altList[0];
-                const altItem = getProductByName(altName);
-
-                if (!altItem || swappedItems.includes(item.name)) return null;
-
-                return (
-                  <li
-                    key={index}
-                    className="bg-white p-4 rounded-xl shadow-sm border flex justify-between items-center"
-                  >
-                    <div>
-                      <h3 className="font-semibold text-gray-800">
-                        {altItem.name}
-                      </h3>
-                      <p className="text-sm text-gray-600">
-                        Carbon: {altItem.carbonScore} g CO₂ × {item.quantity}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => handleSwapItem(item)}
-                      className="bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-1.5 rounded-md"
-                    >
-                      Swap Item
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
-
-        {/* Place Order */}
-        {cart.length > 0 && (
-          <div className="flex justify-center">
-            <Link
-              to="/place-order"
-              className="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg shadow flex items-center gap-2"
-            >
-              <CheckCircle size={20} />
-              Place Order
-            </Link>
-          </div>
-        )}
-      </div>
-    </PageWrapper>
+      </PageWrapper>
+    </Layout>
   );
 };
 

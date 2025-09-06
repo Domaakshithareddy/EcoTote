@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import PageWrapper from "../components/PageWrapper";
 import ProductCard from "../components/ProductCard";
 import fetchJSON from "../utils/fetchJSON";
 import { MapPin } from "lucide-react";
+import { AppContext } from "../context/AppContext";
 
 const centerData = {
   Bangalore: [
@@ -45,6 +46,7 @@ const centerData = {
 const Recycle = () => {
   const [products, setProducts] = useState([]);
   const [selectedCity, setSelectedCity] = useState("Bangalore");
+  const { sidebarCollapsed } = useContext(AppContext);
 
   useEffect(() => {
     fetchJSON("products.json").then((data) => {
@@ -61,14 +63,19 @@ const Recycle = () => {
 
   return (
     <PageWrapper>
-      <div className="ml-60 mt-16 p-6 space-y-6">
+      <div 
+        className="pt-24 p-6 space-y-6 transition-all duration-300"
+        style={{
+          marginLeft: sidebarCollapsed ? '4rem' : '15rem'
+        }}
+      >
         {/* Header */}
         <div className="mb-4">
           <h1 className="text-xl font-bold text-green-800">
             Join Our Recycling Initiative
           </h1>
           <p className="text-gray-800 text-sm">
-            At EcoTote, we're committed to a greener tomorrow. By returning used eco-products like packaging, bottles, and electronics to nearby recycling centers, you help reduce landfill waste and carbon emissions. Every item you return contributes to a more sustainable community—and earns you EcoTokens as a thank you. Let’s close the loop and build a cleaner future together!
+            At EcoTote, we're committed to a greener tomorrow. By returning used eco-products like packaging, bottles, and electronics to nearby recycling centers, you help reduce landfill waste and carbon emissions. Every item you return contributes to a more sustainable community—and earns you EcoTokens as a thank you. Let's close the loop and build a cleaner future together!
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AppContext } from "../context/AppContext"; // ✅
+import { AppContext } from "../context/AppContext"; 
 
 const MOCK_USER = {
   email: "spark@gmail.com",
@@ -8,7 +8,7 @@ const MOCK_USER = {
 };
 
 const AuthPage = () => {
-  const { sidebarCollapsed } = useContext(AppContext); // ✅
+  const { sidebarCollapsed } = useContext(AppContext); 
   const [isLogin, setIsLogin] = useState(true);
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");

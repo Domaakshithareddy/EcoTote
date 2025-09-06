@@ -15,9 +15,12 @@ const WhySustainability = () => {
 
   return (
     <PageWrapper>
-      <div className={`mt-16 px-8 py-10 max-w-6xl text-gray-800 space-y-12 transition-all duration-300 ${
-    sidebarCollapsed ? "ml-16" : "ml-60"
-  }`}>
+      <div 
+        className="pt-24 px-8 py-10 max-w-6xl text-gray-800 space-y-12 transition-all duration-300"
+        style={{
+          marginLeft: sidebarCollapsed ? '4rem' : '15rem'
+        }}
+      >
         {/* Title */}
         <div className="text-center space-y-2">
           <h1 className="text-4xl font-extrabold text-green-800 flex items-center justify-center gap-2">
@@ -26,7 +29,7 @@ const WhySustainability = () => {
           </h1>
           <p className="text-md text-gray-600 max-w-3xl mx-auto">
             Embracing sustainability means taking action today for a better, cleaner tomorrow.
-            It’s about choices — how we live, shop, and take care of our environment.
+            It's about choices — how we live, shop, and take care of our environment.
           </p>
         </div>
 
@@ -37,7 +40,7 @@ const WhySustainability = () => {
             The EcoTote Mission
           </h2>
           <p className="text-sm leading-relaxed text-gray-700">
-            EcoTote is built on a promise — to simplify sustainable living. Here’s how we help:
+            EcoTote is built on a promise — to simplify sustainable living. Here's how we help:
           </p>
           <ul className="list-disc list-inside mt-3 space-y-1 text-sm text-gray-700">
             <li>Offer products made from eco-friendly and recycled materials</li>

@@ -16,7 +16,7 @@ const WhySustainability = () => {
   return (
     <PageWrapper>
       <div 
-        className="pt-16 px-8 py-10 max-w-6xl text-gray-800 space-y-12 transition-all duration-300"
+        className="pt-24 px-8 py-10 max-w-6xl text-gray-800 space-y-12 transition-all duration-300"
         style={{
           marginLeft: sidebarCollapsed ? '4rem' : '15rem'
         }}

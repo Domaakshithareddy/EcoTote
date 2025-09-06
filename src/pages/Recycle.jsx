@@ -64,7 +64,7 @@ const Recycle = () => {
   return (
     <PageWrapper>
       <div 
-        className="pt-16 p-6 space-y-6 transition-all duration-300"
+        className="pt-24 p-6 space-y-6 transition-all duration-300"
         style={{
           marginLeft: sidebarCollapsed ? '4rem' : '15rem'
         }}

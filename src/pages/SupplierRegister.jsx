@@ -35,7 +35,7 @@ const SupplierRegister = () => {
   return (
     <PageWrapper>
       <div 
-        className="pt-16 p-8 min-h-screen bg-green-50 transition-all duration-300"
+        className="pt-24 p-8 min-h-screen bg-green-50 transition-all duration-300"
         style={{
           marginLeft: sidebarCollapsed ? '4rem' : '15rem'
         }}

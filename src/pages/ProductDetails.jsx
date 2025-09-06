@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import fetchJSON from "../utils/fetchJSON";
 import QuantityButton from "../components/QuantityButton";
 import PageWrapper from "../components/PageWrapper";
+import { AppContext } from "../context/AppContext";
 
 const ProductDetails = () => {
   const { productId } = useParams();
+  const { sidebarCollapsed } = useContext(AppContext);
   const [product, setProduct] = useState(null);
   const [allProducts, setAllProducts] = useState([]);
   const [reviews, setReviews] = useState([]);
@@ -44,9 +46,14 @@ const ProductDetails = () => {
 
   return (
     <PageWrapper>
-      <div className="ml-60 mt-16 p-6">
+      <div 
+        className="pt-24 p-6 min-h-screen transition-all duration-300"
+        style={{
+          marginLeft: sidebarCollapsed ? '4rem' : '15rem'
+        }}
+      >
         {/* Product Layout */}
-        <div className="flex flex-col md:flex-row gap-8 mb-10 items-start">
+        <div className="flex flex-col md:flex-row gap-8 mb-10 items-start max-w-7xl mx-auto">
           {/* Left: Product Image */}
           <div className="w-full md:w-[400px] flex-shrink-0">
             <img
@@ -98,7 +105,7 @@ const ProductDetails = () => {
 
         {/* Greener Alternatives */}
         {product && altMap[product.name] && (
-          <div className="mt-10">
+          <div className="mt-10 max-w-7xl mx-auto">
             <h2 className="text-xl font-semibold mb-4 text-green-800">Greener Alternatives</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {altMap[product.name]
@@ -160,7 +167,7 @@ const ProductDetails = () => {
         )}
 
         {/* Reviews Section */}
-        <div className="mt-16">
+        <div className="mt-16 max-w-7xl mx-auto">
           <h2 className="text-xl font-semibold mb-4 text-gray-800">Reviews</h2>
 
           {productReviews.length === 0 ? (
